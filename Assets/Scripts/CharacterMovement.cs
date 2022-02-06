@@ -34,6 +34,16 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        transform.Translate(_speed * Time.deltaTime * GetNormalizedMovementDirection()) ;
+        GetComponent<Rigidbody2D>().velocity = _speed * GetNormalizedMovementDirection() ;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("in collision enter function");
+        if (collision.gameObject.name == "Collision")
+        {
+            print("in if statement of  collision function");
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
     }
 }
