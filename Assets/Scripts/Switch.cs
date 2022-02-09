@@ -1,33 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
+
 
 public class Switch : MonoBehaviour
 {
-
-    public string _targetdoor;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Connections
     
 
+    //Config
+    public Collider2D[] targetDoors;
+    public Collider2D[] triggerableEntities;
+
+    public enum Mode
+    {
+        Permanent, Timed, Toggle 
+    }
+    
+    public Mode switchMode = Mode.Permanent;
+    //State
+
+    //Methods
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
-
-        if (collision.gameObject.name == _targetdoor)
+        var doTrigger = false;
+        foreach (var c in triggerableEntities)
         {
-            collision.gameObject.GetComponent<Collider2D>().enabled = false;
+            if (c == collision) doTrigger = true;
+        }
+
+        if (doTrigger)
+        {
+            foreach (var c in targetDoors)
+            {
+
+                print("TRIGGER");
+                switch (switchMode)
+                {
+                    case Mode.Permanent:
+                        c.enabled = false;
+                        break;
+                    case Mode.Timed:
+                        c.enabled = false;
+                       //Not Sure How to implement this
+                        break;
+                    case Mode.Toggle:
+                        c.enabled = !c.enabled;
+                        break;
+                }
+
+            }
         }
     }
 }
