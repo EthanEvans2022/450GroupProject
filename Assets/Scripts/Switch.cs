@@ -9,7 +9,8 @@ public class Switch : MonoBehaviour
 
     //Config
     public DoorController[] targetDoors;
-    public Collider2D[] triggerableEntities;
+    public string[] triggerableEntities;
+  
 
     public enum Mode
     {
@@ -26,7 +27,8 @@ public class Switch : MonoBehaviour
         var doTrigger = false;
         foreach (var c in triggerableEntities)
         {
-            if (c == collision) doTrigger = true;
+            if (collision.gameObject.GetComponent<CharacterMovement>() && 
+                (collision.gameObject.tag == c)) doTrigger = true;
         }
 
         if (doTrigger)
