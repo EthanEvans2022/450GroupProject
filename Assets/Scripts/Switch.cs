@@ -8,7 +8,7 @@ public class Switch : MonoBehaviour
     
 
     //Config
-    public Collider2D[] targetDoors;
+    public DoorController[] targetDoors;
     public Collider2D[] triggerableEntities;
 
     public enum Mode
@@ -17,6 +17,7 @@ public class Switch : MonoBehaviour
     }
     
     public Mode switchMode = Mode.Permanent;
+    
     //State
 
     //Methods
@@ -37,14 +38,14 @@ public class Switch : MonoBehaviour
                 switch (switchMode)
                 {
                     case Mode.Permanent:
-                        c.enabled = false;
+                        c.SetIsOpen(true);
                         break;
                     case Mode.Timed:
-                        c.enabled = false;
+                        c.SetIsOpen(true);
                        //Not Sure How to implement this
                         break;
                     case Mode.Toggle:
-                        c.enabled = !c.enabled;
+                        c.SetIsOpen(!c.isOpen);
                         break;
                 }
 
