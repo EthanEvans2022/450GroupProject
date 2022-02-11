@@ -25,11 +25,12 @@ public class KeyboardController : MovementHandler
         DashControls();
     }
     
-	override protected void Move(Vector2 vector)
-    {
-        //take a unit vector + multiply by speed?
-        tf.position += new Vector3(vector.x, vector.y, 0) * speed / 3000; //add a constant to balance different controls
-    }
+	// override protected void Move(Vector2 vector)
+ //    {
+ //        rb.velocity = vector;
+ //        //take a unit vector + multiply by speed?
+ //        //tf.position += new Vector3(vector.x, vector.y, 0) * speed / 3000; //add a constant to balance different controls
+ //    }
     protected void StandardControls(){
          //Up
         if(Input.GetKey(KeyCode.UpArrow)){
