@@ -18,7 +18,7 @@ public class MouseController : MovementHandler
     private MovementType movementType;
 
     //Methods
-    public MouseController(float _speed) : base(_speed){
+    public MouseController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed){
 
     }
     protected override void InputListener()
