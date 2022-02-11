@@ -31,10 +31,10 @@ public abstract class MovementHandler : MonoBehaviour
     //Helper Methods
 
     //Updates transform of controller
-    protected void Move(Vector2 vector)
+    virtual protected void Move(Vector2 vector)
     {
         //take a unit vector + multiply by speed?
-        tf.position += new Vector3(vector.x, vector.y, 0) * speed / 3000; //add a constant to balance different controls
+        tf.position += new Vector3(vector.x, vector.y, 0) * speed; 
     }
 
     //Ethan 
