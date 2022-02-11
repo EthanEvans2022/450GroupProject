@@ -11,15 +11,17 @@ public abstract class MovementHandler : MonoBehaviour
     protected Collider collider;
     //Configurations
     public float speed;
+    
+    public float rotationSpeed; //Mark added
 
     //States
 
     //Methods
-    public MovementHandler(float speed){
+    public MovementHandler(float speed, float rotationSpeed) {
         this.speed = speed;
+        this.rotationSpeed = rotationSpeed;
     }
-    void Start()
-    {
+    void Start(){
        tf = GetComponent<Transform>(); 
        rb = GetComponent<Rigidbody2D>();
     }
@@ -29,9 +31,10 @@ public abstract class MovementHandler : MonoBehaviour
     //Helper Methods
 
     //Updates transform of controller
-    protected void Move(Vector2 vector){
+    protected void Move(Vector2 vector)
+    {
         //take a unit vector + multiply by speed?
-        tf.position += new Vector3(vector.x, vector.y, 0) * speed;
+        tf.position += new Vector3(vector.x, vector.y, 0) * speed / 3000; //add a constant to balance different controls
     }
 
     //Ethan 
@@ -44,8 +47,11 @@ public abstract class MovementHandler : MonoBehaviour
     }
 
     //Mark
-    protected void AddForce(Vector3 vector){
-        throw new NotImplementedException();
+    protected void AddForce(float speed){
+        rb.AddRelativeForce(Vector2.up * speed * Time.deltaTime);
+    }
+    protected void AddTorque(float rotationSpeed){
+        rb.AddTorque(rotationSpeed * Time.deltaTime);
     }
     protected abstract void InputListener();
 

@@ -10,14 +10,21 @@ public class KeyboardController : MovementHandler
     //States
 
     //Methods
-    public KeyboardController(float _speed): base(_speed){
+    public KeyboardController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed){
 
     }
 
 
-    override protected void InputListener(){
+    override protected void InputListener() {
+        controlStack();
+    }
+
+    protected void controlStack() {
+        DriftingControls();
         StandardControls();
+        DashControls();
     }
+    
 
     protected void StandardControls(){
          //Up
@@ -38,14 +45,26 @@ public class KeyboardController : MovementHandler
         }    
     }
 
-    //Mark v
+    //Mark 
     //Drifitng controls like Q2
     protected void DriftingControls(){
-        throw new NotImplementedException();
+        if (Input.GetKey(KeyCode.A)) {
+            AddTorque(rotationSpeed);
+        }
+
+        if (Input.GetKey(KeyCode.D)) {
+            AddTorque(-rotationSpeed);
+        }
+
+        if (Input.GetKey(KeyCode.W)) {
+            AddForce(speed);
+        }
     }
     
     //Similar to standard controls, but adds dash/sprinting aspect
     protected void DashControls(){
-        throw new NotImplementedException();
+        if (Input.GetKey(KeyCode.Space)) {
+            AddForce(speed * 8);
+        }
     }
 }
