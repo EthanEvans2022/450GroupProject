@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using TMPro;
 using UnityEngine;
 
 public abstract class MovementHandler : MonoBehaviour
@@ -34,7 +35,7 @@ public abstract class MovementHandler : MonoBehaviour
     virtual protected void Move(Vector2 vector)
     {
         //take a unit vector + multiply by speed?
-        tf.position += new Vector3(vector.x, vector.y, 0) * speed; 
+        rb.velocity = vector;
     }
 
     //Ethan 
