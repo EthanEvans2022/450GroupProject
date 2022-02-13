@@ -38,9 +38,7 @@ namespace FP
             foreach (var s in switches)
             {
                 
-                if (s.getIsOn())
-                {
-                    print("Open");
+                if (s.getIsOn()){
                     openFlag = true;
                 }
             }

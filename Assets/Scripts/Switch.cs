@@ -18,7 +18,7 @@ namespace FP
 
 
         //Config
-        public bool inverted;
+        public bool inverted = false;
         public string[] triggerableEntities;
         public Sprite closedSprite;
         public Sprite openSprite;
@@ -32,7 +32,7 @@ namespace FP
         private void Start()
         {
             _sprite = gameObject.GetComponent<SpriteRenderer>();
-            _sprite.sprite = getIsOn() ? openSprite : closedSprite;
+            _sprite.sprite = isOn ? openSprite : closedSprite;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -67,7 +67,7 @@ namespace FP
                     isOn = !isOn;
                     break;
             }
-            _sprite.sprite = getIsOn() ? openSprite : closedSprite;
+            _sprite.sprite = isOn ? openSprite : closedSprite;
         }
     }
 }
