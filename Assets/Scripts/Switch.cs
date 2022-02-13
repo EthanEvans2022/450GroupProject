@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace FP
@@ -20,8 +21,10 @@ namespace FP
         //Config
         public bool inverted = false;
         public string[] triggerableEntities;
-        public Sprite closedSprite;
-        public Sprite openSprite;
+        public Sprite offSprite;
+        public Sprite onSprite;
+
+        public float switchDelay = 3;
         
         public Mode switchMode = Mode.Permanent;
 
@@ -32,7 +35,7 @@ namespace FP
         private void Start()
         {
             _sprite = gameObject.GetComponent<SpriteRenderer>();
-            _sprite.sprite = isOn ? openSprite : closedSprite;
+            _sprite.sprite = isOn ? onSprite : offSprite;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -44,6 +47,25 @@ namespace FP
                     doTrigger = true;
 
             if (doTrigger) setIsOn();
+        }
+        
+        //turn the switch off after x seconds
+        private IEnumerator StartSwitchTimer()
+        {
+            yield return new WaitForSeconds(switchDelay);
+            isOn = false;
+            _sprite.sprite = isOn ? onSprite : offSprite;
+        }
+        
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            var doTrigger = false;
+            foreach (var c in triggerableEntities)
+                if (collision.gameObject.GetComponent<CharacterMovement>() &&
+                    collision.gameObject.CompareTag(c))
+                    doTrigger = true;
+
+            if (doTrigger) StartCoroutine(StartSwitchTimer());
         }
 
         public bool getIsOn()
@@ -61,13 +83,14 @@ namespace FP
                     break;
                 case Mode.Timed:
                     isOn = true;
+                    
                     //Not Sure How to implement this
                     break;
                 case Mode.Toggle:
                     isOn = !isOn;
                     break;
             }
-            _sprite.sprite = isOn ? openSprite : closedSprite;
+            _sprite.sprite = isOn ? onSprite : offSprite;
         }
     }
 }

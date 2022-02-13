@@ -101,8 +101,9 @@ MonoBehaviour:
   inverted: 0
   triggerableEntities:
   - Player
-  closedSprite: {fileID: -1840555594, guid: 6bd1caed49cfc534299ec5ad72e4b182, type: 3}
-  openSprite: {fileID: -1941070777, guid: 6bd1caed49cfc534299ec5ad72e4b182, type: 3}
+  offSprite: {fileID: -1840555594, guid: 6bd1caed49cfc534299ec5ad72e4b182, type: 3}
+  onSprite: {fileID: -1941070777, guid: 6bd1caed49cfc534299ec5ad72e4b182, type: 3}
+  switchDelay: 3
   switchMode: 2
 --- !u!61 &4021923284020221309
 BoxCollider2D:
