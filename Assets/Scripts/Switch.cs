@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace FP
@@ -24,13 +25,15 @@ namespace FP
         public Sprite offSprite;
         public Sprite onSprite;
 
-        public float switchDelay = 3;
+        //TODO: Make this matter in all modes using it as a time to activate the outgoing signal
+        public float switchDelay = 0;
         
         public Mode switchMode = Mode.Permanent;
 
         //State
         private bool isOn = false;
 
+        private Coroutine _currentRoutine;
         //Methods
         private void Start()
         {
@@ -65,7 +68,11 @@ namespace FP
                     collision.gameObject.CompareTag(c))
                     doTrigger = true;
 
-            if (doTrigger) StartCoroutine(StartSwitchTimer());
+            if (doTrigger && switchMode == Mode.Timed)
+            {
+                if(!_currentRoutine.IsUnityNull()) StopCoroutine(_currentRoutine);
+                _currentRoutine = StartCoroutine(StartSwitchTimer());
+            }
         }
 
         public bool getIsOn()
@@ -79,12 +86,8 @@ namespace FP
             switch (switchMode)
             {
                 case Mode.Permanent:
-                    isOn = true;
-                    break;
                 case Mode.Timed:
                     isOn = true;
-                    
-                    //Not Sure How to implement this
                     break;
                 case Mode.Toggle:
                     isOn = !isOn;
