@@ -32,22 +32,24 @@ public class KeyboardController : MovementHandler
  //        //tf.position += new Vector3(vector.x, vector.y, 0) * speed / 3000; //add a constant to balance different controls
  //    }
     protected void StandardControls(){
-         //Up
-        if(Input.GetKey(KeyCode.UpArrow)){
-            Move(new Vector2(0, 1));
-        }       
-        //Down
-        if(Input.GetKey(KeyCode.DownArrow)){
-            Move(new Vector2(0, -1));
-        }       
-        //Left
-        if(Input.GetKey(KeyCode.LeftArrow)){
-            Move(new Vector2(-1, 0));
-        }       
-        //Right
-        if(Input.GetKey(KeyCode.RightArrow)){
-            Move(new Vector2(1, 0));
-        }    
+        Vector2 direction = Vector2.zero;
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            direction += new Vector2(-1, 0);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            direction += new Vector2(1, 0);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            direction += new Vector2(0, 1);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            direction += new Vector2(0, -1);
+        }
+        Move(direction);
     }
 
     //Mark 

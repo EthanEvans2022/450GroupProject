@@ -9,7 +9,7 @@ public abstract class MovementHandler : MonoBehaviour
     //Outlets
     protected Transform tf;
     protected Rigidbody2D rb;
-    protected Collider collider;
+    protected Collider coll;
     //Configurations
     public float speed;
     
@@ -35,7 +35,8 @@ public abstract class MovementHandler : MonoBehaviour
     virtual protected void Move(Vector2 vector)
     {
         //take a unit vector + multiply by speed?
-        rb.velocity = vector;
+        Vector2 direction = vector.normalized; 
+        rb.velocity = direction * speed;
     }
 
     //Ethan 
