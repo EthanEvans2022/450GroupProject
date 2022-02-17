@@ -267,7 +267,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 291d7f5f1890f4eccb33cb3d02c2a633, type: 3}
+  m_Sprite: {fileID: -1167770750, guid: 6bd1caed49cfc534299ec5ad72e4b182, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -305,8 +305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33348d082214d4f5bbdbb920e6653194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.07
+  speed: 5
   rotationSpeed: 0
+  mouseBuffer: 0.1
 --- !u!50 &1364690803
 Rigidbody2D:
   serializedVersion: 4
@@ -388,8 +389,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 291d7f5f1890f4eccb33cb3d02c2a633, type: 3}
-  m_Color: {r: 0.9433962, g: 0.013349922, b: 0.013349922, a: 1}
+  m_Sprite: {fileID: 793625098, guid: b5b7b6b0ed76947408ca406ee3dd9f14, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -447,5 +448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1c0c84121aa4a66906c8a8e64bf053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 10
   rotationSpeed: 150
+  mousePlayer: {fileID: 1364690798}
+  combinedSprite: {fileID: 1766377623, guid: b5b7b6b0ed76947408ca406ee3dd9f14, type: 3}
+  seperateSprite: {fileID: 793625098, guid: b5b7b6b0ed76947408ca406ee3dd9f14, type: 3}
