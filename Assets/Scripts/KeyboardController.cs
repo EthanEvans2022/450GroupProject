@@ -6,16 +6,19 @@ using UnityEngine;
 public class KeyboardController : MovementHandler
 {
     //Outputs
+    public GameObject mousePlayer;
+    public Sprite combinedSprite;
+    public Sprite seperateSprite;
     //Configurations 
     //States
 
     //Methods
     public KeyboardController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed){
-
+    
     }
 
-
     override protected void InputListener() {
+        combineCharacters();
         controlStack();
     }
 
@@ -72,6 +75,21 @@ public class KeyboardController : MovementHandler
     protected void DashControls(){
         if (Input.GetKey(KeyCode.Space)) {
             AddForce(speed * 8);
+        }
+    }
+
+    protected void combineCharacters(){
+        if (Input.GetKeyDown(KeyCode.C)){
+            bool isActive = mousePlayer.activeSelf;
+            if(isActive){
+                mousePlayer.SetActive(false);
+                sprite_renderer.sprite = combinedSprite;
+            }
+            else{
+                mousePlayer.SetActive(true);
+                mousePlayer.transform.position = tf.position;
+                sprite_renderer.sprite = seperateSprite;
+            }
         }
     }
 }

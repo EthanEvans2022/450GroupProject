@@ -10,6 +10,7 @@ public abstract class MovementHandler : MonoBehaviour
     protected Transform tf;
     protected Rigidbody2D rb;
     protected Collider coll;
+    protected SpriteRenderer sprite_renderer;
     //Configurations
     public float speed;
     
@@ -25,6 +26,7 @@ public abstract class MovementHandler : MonoBehaviour
     void Start(){
        tf = GetComponent<Transform>(); 
        rb = GetComponent<Rigidbody2D>();
+       sprite_renderer = GetComponent<SpriteRenderer>();
     }
     public void Update(){
         InputListener();
