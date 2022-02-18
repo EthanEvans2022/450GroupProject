@@ -1,57 +1,99 @@
-using System.Globalization;
+using System;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
-
-public class Switch : MonoBehaviour
+namespace FP
 {
-    //Connections
-    
-
-    //Config
-    public DoorController[] targetDoors;
-    public string[] triggerableEntities;
-  
-
-    public enum Mode
+    public class Switch : MonoBehaviour
     {
-        Permanent, Timed, Toggle 
-    }
-    
-    public Mode switchMode = Mode.Permanent;
-    
-    //State
-
-    //Methods
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        var doTrigger = false;
-        foreach (var c in triggerableEntities)
+        //Outlets 
+        private SpriteRenderer _sprite;
+        
+        public enum Mode
         {
-            if (collision.gameObject.GetComponent<CharacterMovement>() && 
-                (collision.gameObject.tag == c)) doTrigger = true;
+            Permanent,
+            Timed,
+            Toggle
+        }
+        //Connections
+
+
+        //Config
+        public bool inverted = false;
+        public string[] triggerableEntities;
+        public Sprite offSprite;
+        public Sprite onSprite;
+
+        //TODO: Make this matter in all modes using it as a time to activate the outgoing signal
+        public float switchDelay = 0;
+        
+        public Mode switchMode = Mode.Permanent;
+
+        //State
+        private bool isOn = false;
+
+        private Coroutine _currentRoutine;
+        //Methods
+        private void Start()
+        {
+            _sprite = gameObject.GetComponent<SpriteRenderer>();
+            _sprite.sprite = isOn ? onSprite : offSprite;
         }
 
-        if (doTrigger)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            foreach (var c in targetDoors)
+            var doTrigger = false;
+            foreach (var c in triggerableEntities)
+                if (collision.gameObject.GetComponent<CharacterMovement>() &&
+                    collision.gameObject.CompareTag(c))
+                    doTrigger = true;
+
+            if (doTrigger) setIsOn();
+        }
+        
+        //turn the switch off after x seconds
+        private IEnumerator StartSwitchTimer()
+        {
+            yield return new WaitForSeconds(switchDelay);
+            isOn = false;
+            _sprite.sprite = isOn ? onSprite : offSprite;
+        }
+        
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            var doTrigger = false;
+            foreach (var c in triggerableEntities)
+                if (collision.gameObject.GetComponent<CharacterMovement>() &&
+                    collision.gameObject.CompareTag(c))
+                    doTrigger = true;
+
+            if (doTrigger && switchMode == Mode.Timed)
             {
-
-                print("TRIGGER");
-                switch (switchMode)
-                {
-                    case Mode.Permanent:
-                        c.SetIsOpen(true);
-                        break;
-                    case Mode.Timed:
-                        c.SetIsOpen(true);
-                       //Not Sure How to implement this
-                        break;
-                    case Mode.Toggle:
-                        c.SetIsOpen(!c.isOpen);
-                        break;
-                }
-
+                if(!_currentRoutine.IsUnityNull()) StopCoroutine(_currentRoutine);
+                _currentRoutine = StartCoroutine(StartSwitchTimer());
             }
+        }
+
+        public bool getIsOn()
+        {
+            return isOn ^ inverted;
+        }
+
+        private void setIsOn()
+        {
+            print("TRIGGER");
+            switch (switchMode)
+            {
+                case Mode.Permanent:
+                case Mode.Timed:
+                    isOn = true;
+                    break;
+                case Mode.Toggle:
+                    isOn = !isOn;
+                    break;
+            }
+            _sprite.sprite = isOn ? onSprite : offSprite;
         }
     }
 }
