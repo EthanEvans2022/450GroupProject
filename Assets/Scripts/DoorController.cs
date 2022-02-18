@@ -46,9 +46,9 @@ namespace FP
             isOpen = openFlag;
             //Sprite Change
             //TODO: animation
-            print(openSprite);
-            print(closedSprite);
-            print(GetIsOpen());
+            //print(openSprite);
+            //print(closedSprite);
+            //print(GetIsOpen());
             _sprite.sprite = GetIsOpen() ? openSprite : closedSprite;
 
             //Collision toggle

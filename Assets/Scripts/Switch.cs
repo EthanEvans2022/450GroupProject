@@ -45,8 +45,7 @@ namespace FP
         {
             var doTrigger = false;
             foreach (var c in triggerableEntities)
-                if (collision.gameObject.GetComponent<CharacterMovement>() &&
-                    collision.gameObject.CompareTag(c))
+                if (collision.gameObject.CompareTag(c))
                     doTrigger = true;
 
             if (doTrigger) setIsOn();
@@ -62,14 +61,15 @@ namespace FP
         
         private void OnTriggerExit2D(Collider2D collision)
         {
+
             var doTrigger = false;
             foreach (var c in triggerableEntities)
-                if (collision.gameObject.GetComponent<CharacterMovement>() &&
-                    collision.gameObject.CompareTag(c))
+                if (collision.gameObject.CompareTag(c))
                     doTrigger = true;
 
             if (doTrigger && switchMode == Mode.Timed)
             {
+                print("MADE IT HERE");
                 if(!_currentRoutine.IsUnityNull()) StopCoroutine(_currentRoutine);
                 _currentRoutine = StartCoroutine(StartSwitchTimer());
             }
