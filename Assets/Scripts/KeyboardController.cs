@@ -6,16 +6,19 @@ using UnityEngine;
 public class KeyboardController : MovementHandler
 {
     //Outputs
+    public GameObject mousePlayer;
+    public Sprite combinedSprite;
+    public Sprite seperateSprite;
     //Configurations 
     //States
 
     //Methods
     public KeyboardController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed){
-
+    
     }
 
-
     override protected void InputListener() {
+        combineCharacters();
         controlStack();
     }
 
@@ -32,22 +35,24 @@ public class KeyboardController : MovementHandler
  //        //tf.position += new Vector3(vector.x, vector.y, 0) * speed / 3000; //add a constant to balance different controls
  //    }
     protected void StandardControls(){
-         //Up
-        if(Input.GetKey(KeyCode.UpArrow)){
-            Move(new Vector2(0, 1));
-        }       
-        //Down
-        if(Input.GetKey(KeyCode.DownArrow)){
-            Move(new Vector2(0, -1));
-        }       
-        //Left
-        if(Input.GetKey(KeyCode.LeftArrow)){
-            Move(new Vector2(-1, 0));
-        }       
-        //Right
-        if(Input.GetKey(KeyCode.RightArrow)){
-            Move(new Vector2(1, 0));
-        }    
+        Vector2 direction = Vector2.zero;
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            direction += new Vector2(-1, 0);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            direction += new Vector2(1, 0);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            direction += new Vector2(0, 1);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            direction += new Vector2(0, -1);
+        }
+        Move(direction);
     }
 
     //Mark 
@@ -70,6 +75,21 @@ public class KeyboardController : MovementHandler
     protected void DashControls(){
         if (Input.GetKey(KeyCode.Space)) {
             AddForce(speed * 8);
+        }
+    }
+
+    protected void combineCharacters(){
+        if (Input.GetKeyDown(KeyCode.C)){
+            bool isActive = mousePlayer.activeSelf;
+            if(isActive){
+                mousePlayer.SetActive(false);
+                sprite_renderer.sprite = combinedSprite;
+            }
+            else{
+                mousePlayer.SetActive(true);
+                mousePlayer.transform.position = tf.position;
+                sprite_renderer.sprite = seperateSprite;
+            }
         }
     }
 }

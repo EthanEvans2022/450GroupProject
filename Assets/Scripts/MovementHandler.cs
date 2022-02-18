@@ -9,7 +9,8 @@ public abstract class MovementHandler : MonoBehaviour
     //Outlets
     protected Transform tf;
     protected Rigidbody2D rb;
-    protected Collider collider;
+    protected Collider coll;
+    protected SpriteRenderer sprite_renderer;
     //Configurations
     public float speed;
     
@@ -25,6 +26,7 @@ public abstract class MovementHandler : MonoBehaviour
     void Start(){
        tf = GetComponent<Transform>(); 
        rb = GetComponent<Rigidbody2D>();
+       sprite_renderer = GetComponent<SpriteRenderer>();
     }
     public void Update(){
         InputListener();
@@ -35,7 +37,8 @@ public abstract class MovementHandler : MonoBehaviour
     virtual protected void Move(Vector2 vector)
     {
         //take a unit vector + multiply by speed?
-        rb.velocity = vector;
+        Vector2 direction = vector.normalized; 
+        rb.velocity = direction * speed;
     }
 
     //Ethan 
