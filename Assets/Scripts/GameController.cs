@@ -7,7 +7,11 @@ public class GameController : MonoBehaviour {
     //outlet
     public TMP_Text textHealth;
     
+    
+    //fields
     public int health;
+    int interval = 1; 
+    private float nextTime = 0;
 
     public void healthUpdate(int x) {
         health += x;
@@ -18,27 +22,29 @@ public class GameController : MonoBehaviour {
         textHealth.text = health.ToString();
     }
     
-    
-    // Start is called before the first frame update
-    void Start() {
-        health = 100;
-    }
-
-    // Update is called once per frame
-    int interval = 1; 
-    float nextTime = 0;
-     
-    // Update is called once per frame
-    void Update () {
-        
+    void depleting() {
         if (Time.time >= nextTime) {
             healthUpdate(-1);
             updateDisplay();
- 
-            nextTime += interval; 
- 
+            nextTime += interval;
         }
-     
+    }
+
+    void checkDepletingState() {
+        if (true) {
+            depleting();
+        }
+    }
+    
+    
+    void Start() {
+        health = 100;
+    }
+    
+    void Update () {
+        checkDepletingState();
+
+
     }
 
 }
