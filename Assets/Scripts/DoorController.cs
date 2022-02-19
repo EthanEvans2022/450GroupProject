@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 namespace FP
 {
@@ -7,7 +9,7 @@ namespace FP
     {
         //Outlets
         private Collider2D _collider;
-
+        private ShadowCaster2D _shadowCaster2D;
         private SpriteRenderer _sprite;
 
         //Configuration
@@ -24,6 +26,7 @@ namespace FP
         {
             _collider = gameObject.GetComponent<Collider2D>();
             _sprite = gameObject.GetComponent<SpriteRenderer>();
+            _shadowCaster2D = gameObject.GetComponent<ShadowCaster2D>();
             SyncIsOpen();
         }
 
@@ -46,13 +49,13 @@ namespace FP
             isOpen = openFlag;
             //Sprite Change
             //TODO: animation
-            //print(openSprite);
-            //print(closedSprite);
-            //print(GetIsOpen());
             _sprite.sprite = GetIsOpen() ? openSprite : closedSprite;
 
             //Collision toggle
             _collider.enabled = !GetIsOpen();
+            
+            //Shadow toggle
+            _shadowCaster2D.enabled = !GetIsOpen();
         }
 
 
