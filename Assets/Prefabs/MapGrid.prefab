@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 665129255190907938}
   - component: {fileID: 665129255190907941}
   m_Layer: 6
-  m_Name: Tilemap (1)
+  m_Name: Tilemap - Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3378,7 +3378,7 @@ GameObject:
   - component: {fileID: 665129255756908502}
   - component: {fileID: 665129255756908501}
   m_Layer: 7
-  m_Name: Tilemap
+  m_Name: Tilemap - Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6262,7 +6262,7 @@ MonoBehaviour:
   - {x: 11, y: 2, z: 0}
   m_ShapePathHash: -1493560155
   m_Mesh: {fileID: 0}
-  m_InstanceId: 27348
+  m_InstanceId: 29008
 --- !u!1 &665129256683381902
 GameObject:
   m_ObjectHideFlags: 0
