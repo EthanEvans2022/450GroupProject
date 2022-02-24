@@ -40,15 +40,15 @@ public class KeyboardController : MovementHandler
         {
             direction += new Vector2(-1, 0);
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.D))
         {
             direction += new Vector2(1, 0);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.W))
         {
             direction += new Vector2(0, 1);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.S))
         {
             direction += new Vector2(0, -1);
         }

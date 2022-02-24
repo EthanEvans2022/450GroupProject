@@ -12,15 +12,15 @@ public class MouseController : MovementHandler
     //States
     //POC state, allows for switching between movements in demo
     private enum MovementType{
-        Teleport,
         Follow,
+        Teleport,
         Track
     }
     private MovementType movementType;
 
     //Methods
-    public MouseController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed){
-        
+    public MouseController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed) {
+        movementType = MovementType.Follow;
     }
     protected override void InputListener()
     {
@@ -43,6 +43,7 @@ public class MouseController : MovementHandler
             case MovementType.Track:
                 TrackMouse();
                 break;
+            
         }
     }
 
