@@ -36,19 +36,19 @@ public class KeyboardController : MovementHandler
  //    }
     protected void StandardControls(){
         Vector2 direction = Vector2.zero;
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             direction += new Vector2(-1, 0);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             direction += new Vector2(1, 0);
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.S))
         {
             direction += new Vector2(0, 1);
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             direction += new Vector2(0, -1);
         }

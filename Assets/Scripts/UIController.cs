@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class GameController : MonoBehaviour {
+public class UIController : MonoBehaviour {
     //outlet
-    public TMP_Text textHealth;
+    public TMP_Text keyboardHealthText;
+    public TMP_Text mouseHealthText;
     
     
     //fields
-    public int health;
-    int interval = 1; 
-    private float nextTime = 0;
+    public int keyboardHealth;
+    public int mouseHealth;
+   
 
     public void healthUpdate(int x) {
+        switch (player) {
+            
+        }
         health += x;
         updateDisplay();
     }
 
     void updateDisplay() {
-        textHealth.text = health.ToString();
+        keyboardHealthText.text = keyboardHealth.ToString();
+        mouseHealthText.text = mouseHealth.ToString();
     }
     
-    void depleting() {
+    void depleting(int interval, float nextTime) {
         if (Time.time >= nextTime) {
             healthUpdate(-1);
             updateDisplay();
