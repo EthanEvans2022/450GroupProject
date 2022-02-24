@@ -3,93 +3,98 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class KeyboardController : MovementHandler
+public class KeyboardController : MonoBehaviour
 {
     //Outputs
+    protected Transform tf;
+    protected Rigidbody2D rb;
+    protected SpriteRenderer sprite_renderer;
     public GameObject mousePlayer;
     public Sprite combinedSprite;
     public Sprite seperateSprite;
     //Configurations 
+    public float speed;
+    public float speedPenalty = 1;
+    /*PROTOTYPES: Not being used
+    public float rotationSpeed;
+    public float dashMultiplier;
+    */
     //States
-
+    private bool isCombined;
     //Methods
-    public KeyboardController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed){
-    
+    void Start(){
+       tf = GetComponent<Transform>(); 
+       rb = GetComponent<Rigidbody2D>();
+       sprite_renderer = GetComponent<SpriteRenderer>();
+       isCombined = true;
+       CombineCharacters();
     }
 
-    override protected void InputListener() {
-        combineCharacters();
-        controlStack();
+    void Update(){
+        InputListener();
     }
 
-    protected void controlStack() {
-        DriftingControls();
-        StandardControls();
-        DashControls();
-    }
-    
-	// override protected void Move(Vector2 vector)
- //    {
- //        rb.velocity = vector;
- //        //take a unit vector + multiply by speed?
- //        //tf.position += new Vector3(vector.x, vector.y, 0) * speed / 3000; //add a constant to balance different controls
- //    }
-    protected void StandardControls(){
+    private void InputListener(){
+        //Movement Controls
         Vector2 direction = Vector2.zero;
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
+        if (Input.GetKey(KeyCode.A))
             direction += new Vector2(-1, 0);
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
+        if (Input.GetKey(KeyCode.D))
             direction += new Vector2(1, 0);
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
+        if (Input.GetKey(KeyCode.W))
             direction += new Vector2(0, 1);
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
+        if (Input.GetKey(KeyCode.S))
             direction += new Vector2(0, -1);
+        rb.velocity = direction.normalized * speed;
+
+        //Combine Control
+        if (Input.GetKeyDown(KeyCode.C)){
+            isCombined = !isCombined;
+            CombineCharacters();
         }
-        Move(direction);
+    }
+    protected void CombineCharacters(){
+        if(isCombined){
+            //Deactivate mousePlayer
+            mousePlayer.SetActive(false);
+            //Change current keyboard player sprite
+            sprite_renderer.sprite = combinedSprite;
+            //Update speed
+            speed *= speedPenalty;
+        }
+        else{
+            //Activate mousePlayer
+            mousePlayer.SetActive(true);
+            mousePlayer.transform.position = tf.position;
+            //Change keyboard player sprite
+            sprite_renderer.sprite = seperateSprite;
+            //Update speed
+            speed /= speedPenalty;
+        }
     }
 
-    //Mark 
+    //PROTOTYPES: Not currently being used
     //Drifitng controls like Q2
+    /*
     protected void DriftingControls(){
         if (Input.GetKey(KeyCode.A)) {
-            AddTorque(rotationSpeed);
+            rb.AddRelativeForce(Vector2.up * rotationSpeed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.D)) {
-            AddTorque(-rotationSpeed);
+            rb.AddRelativeForce(Vector2.up * -rotationSpeed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.W)) {
-            AddForce(speed);
+            rb.AddRelativeForce(Vector2.up * speed * Time.deltaTime);
         }
     }
     
     //Similar to standard controls, but adds dash/sprinting aspect
     protected void DashControls(){
         if (Input.GetKey(KeyCode.Space)) {
-            AddForce(speed * 8);
+            rb.AddRelativeForce(Vector2.up * speed * dashMultiplier * Time.deltaTime);
         }
     }
-
-    protected void combineCharacters(){
-        if (Input.GetKeyDown(KeyCode.C)){
-            bool isActive = mousePlayer.activeSelf;
-            if(isActive){
-                mousePlayer.SetActive(false);
-                sprite_renderer.sprite = combinedSprite;
-            }
-            else{
-                mousePlayer.SetActive(true);
-                mousePlayer.transform.position = tf.position;
-                sprite_renderer.sprite = seperateSprite;
-            }
-        }
-    }
+    */
 }
