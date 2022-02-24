@@ -9103,8 +9103,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8384475305063621463, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384475305063621463, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: mousePlayer
       value: 
       objectReference: {fileID: 1871437296}
+    - target: {fileID: 8384475305063621463, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
+      propertyPath: speedPenalty
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
