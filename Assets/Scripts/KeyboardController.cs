@@ -36,6 +36,19 @@ public class KeyboardController : MonoBehaviour
 
     private void InputListener(){
         //Movement Controls
+        //On by default, but could change for when combined 
+        StandardControls();
+        //Combine Control
+        if (Input.GetKeyDown(KeyCode.C)){
+            isCombined = !isCombined;
+            CombineCharacters();
+        }
+        if (isCombined){
+           CombinedControls(); 
+        }
+    }
+
+    private void StandardControls(){
         Vector2 direction = Vector2.zero;
         if (Input.GetKey(KeyCode.A))
             direction += new Vector2(-1, 0);
@@ -46,12 +59,13 @@ public class KeyboardController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
             direction += new Vector2(0, -1);
         rb.velocity = direction.normalized * speed;
-
-        //Combine Control
-        if (Input.GetKeyDown(KeyCode.C)){
-            isCombined = !isCombined;
-            CombineCharacters();
-        }
+    }
+    private void CombinedControls(){
+        Vector3 mousePosition = GetMouseLocation();
+        Vector3 currPos = tf.position;
+        Vector3 direction = mousePosition - currPos;
+        //Vector2 direction = diff.magnitude < mouseBuffer ? new Vector2(0,0) : new Vector2(diff.x, diff.y);
+        tf.up = direction;
     }
     protected void CombineCharacters(){
         if(isCombined){
@@ -68,9 +82,16 @@ public class KeyboardController : MonoBehaviour
             mousePlayer.transform.position = tf.position;
             //Change keyboard player sprite
             sprite_renderer.sprite = seperateSprite;
+            //TEMP: reset up direction
+            tf.up = new Vector3(0,1,0);
             //Update speed
             speed /= speedPenalty;
         }
+    }
+    private Vector3 GetMouseLocation(){
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+        return mousePos;
     }
 
     //PROTOTYPES: Not currently being used

@@ -9104,7 +9104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384475305063621463, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: speed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8384475305063621463, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: mousePlayer
