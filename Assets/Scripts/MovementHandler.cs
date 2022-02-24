@@ -6,6 +6,10 @@ using UnityEngine;
 
 public abstract class MovementHandler : MonoBehaviour
 {
+    //DEGREGATED
+    //TODO: DELETE FILE
+
+    /*
     //Outlets
     protected Transform tf;
     protected Rigidbody2D rb;
@@ -58,5 +62,6 @@ public abstract class MovementHandler : MonoBehaviour
         rb.AddTorque(rotationSpeed * Time.deltaTime);
     }
     protected abstract void InputListener();
+*/
 
 }

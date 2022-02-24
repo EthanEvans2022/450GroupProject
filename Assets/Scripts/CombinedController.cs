@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CombinedController : MovementHandler 
 {
-
+    //DEGREGATED
+    //TODO: DELETE FILE
+    /*
      public CombinedController(float _speed, float _rotaionSpeed): base(_speed, _rotaionSpeed){
 
     }
@@ -29,4 +31,5 @@ public class CombinedController : MovementHandler
         }
         Move(direction);
     }
+    */
 }
