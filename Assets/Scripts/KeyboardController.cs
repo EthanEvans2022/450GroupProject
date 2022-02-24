@@ -12,6 +12,7 @@ public class KeyboardController : MonoBehaviour
     public GameObject mousePlayer;
     public Sprite combinedSprite;
     public Sprite seperateSprite;
+    public GameObject projectilePrefab; 
     //Configurations 
     public float speed;
     public float speedPenalty = 1;
@@ -66,6 +67,12 @@ public class KeyboardController : MonoBehaviour
         Vector3 direction = mousePosition - currPos;
         //Vector2 direction = diff.magnitude < mouseBuffer ? new Vector2(0,0) : new Vector2(diff.x, diff.y);
         tf.up = direction;
+
+        if(Input.GetMouseButtonDown(0)){
+            GameObject projectile = Instantiate(projectilePrefab);
+            projectile.transform.position = tf.position;
+            projectile.transform.rotation = tf.rotation;
+        }
     }
     protected void CombineCharacters(){
         if(isCombined){
