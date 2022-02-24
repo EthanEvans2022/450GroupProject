@@ -112,8 +112,6 @@ public class UI_StateController : MonoBehaviour {
         else {
             depletingFlag = false;
         }
-        Debug.Log(depletingFlag);
-        Debug.Log(keyboardHealth);
         updateHealthDisplay();
         depleting();
     }
