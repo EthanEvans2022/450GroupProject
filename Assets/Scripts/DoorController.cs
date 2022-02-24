@@ -9,9 +9,9 @@ namespace FP
         public Sprite closedSprite;
         public Sprite openSprite;
         public bool inverted;
-
         public Switch[] switches;
 
+        public bool showGizmos = true;
         //Outlets
         private Collider2D _collider;
         private ShadowCaster2D _shadowCaster2D;
@@ -36,12 +36,15 @@ namespace FP
 
         private void OnDrawGizmosSelected()
         {
+            if (!showGizmos) return;
+            Gizmos.color = inverted ? Color.red : Color.blue;
+            Gizmos.DrawCube(transform.position, new Vector3(.4f, .4f, .4f));
             foreach (var s in switches)
             {
                 var target = s.gameObject.transform;
 
                 // Draws a blue line from this transform to the target
-                Gizmos.color = Color.blue;
+                Gizmos.color = s.inverted ? Color.red : Color.blue;
                 Gizmos.DrawLine(transform.position, target.position);
             }
         }
