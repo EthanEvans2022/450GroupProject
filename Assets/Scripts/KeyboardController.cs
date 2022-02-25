@@ -32,6 +32,10 @@ public class KeyboardController : MonoBehaviour
     }
 
     void Update(){
+        if (isCombined)
+        {
+            mousePlayer.transform.position = transform.position;
+        }
         InputListener();
     }
 
