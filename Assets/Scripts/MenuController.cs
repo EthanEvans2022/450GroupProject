@@ -13,6 +13,8 @@ public class MenuController : MonoBehaviour
 	public GameObject optionsMenu;
 	public GameObject levelMenu;
 	public GameObject nextMenu;
+	private AssetBundle myLoadedAssetBundle;
+	private string[] scenePaths;
 
 
 	// Methods
@@ -22,6 +24,8 @@ public class MenuController : MonoBehaviour
 		instance = this;
 		Hide();
 	}
+
+
 
 	public void Show()
 	{
@@ -74,6 +78,7 @@ public class MenuController : MonoBehaviour
 		print("top of ShowNextMenu()");
 		SwitchMenu(nextMenu);
 	}
+	
 }
 
 
