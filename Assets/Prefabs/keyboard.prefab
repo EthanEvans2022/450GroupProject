@@ -716,7 +716,7 @@ MonoBehaviour:
   combinedSprite: {fileID: 1766377623, guid: b5b7b6b0ed76947408ca406ee3dd9f14, type: 3}
   seperateSprite: {fileID: 793625098, guid: b5b7b6b0ed76947408ca406ee3dd9f14, type: 3}
   projectilePrefab: {fileID: 50327302617615270, guid: 97dd76b36020b46a8a5f735ea40dbfb2, type: 3}
-  speed: 10
+  speed: 5
   speedPenalty: 2
 --- !u!70 &-3557408489269618651
 CapsuleCollider2D:
