@@ -30,6 +30,12 @@ public abstract class MovementHandler : MonoBehaviour
     }
     public void Update(){
         InputListener();
+        
+        // the Escape key will trigger showing the main menu
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            MenuController.instance.ShowMainMenu();
+        }
     }
     //Helper Methods
 
