@@ -28,6 +28,9 @@ public class HealthController : MonoBehaviour
     [NonSerialized] public readonly damageEvent BeforeDamageEvent = new();
     [NonSerialized] public readonly healEvent BeforeHealEvent = new();
 
+    public int getHealth()
+    {
+        return currentHealth;}
     public (healEvent, healEvent) Heal(int amount, int ticksLeft = 0, bool canOverHeal = false)
     {
         healEvent localBeforeHealEvent = new();
