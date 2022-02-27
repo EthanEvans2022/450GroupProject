@@ -10,12 +10,9 @@ public class TrapController : MonoBehaviour
     public HealthController.DamageType damageType = HealthController.DamageType.None;
 
 
-
-
     // Start is called before the first frame update
     private void Start()
     {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -23,7 +20,7 @@ public class TrapController : MonoBehaviour
         print("Trigger");
 
         foreach (var c in triggerableEntities)
-            if (col.gameObject.GetComponent<HealthController>()&&col.gameObject.CompareTag(c))
+            if (col.gameObject.GetComponent<HealthController>() && col.gameObject.CompareTag(c))
             {
                 DealDamage(col.gameObject.GetComponent<HealthController>());
                 break;
@@ -33,7 +30,8 @@ public class TrapController : MonoBehaviour
     private void DealDamage(HealthController target)
     {
         print("DEALING " + damageAmount + " " + damageType + " DAMAGE TO: " + target);
-        
+
+        target.AfterDamageEvent.AddListener((_, type, _, _) => { print("DAMAGE DEALT OF TYPE: " + type); });
         target.DealDamage(damageAmount, damageType);
     }
 }

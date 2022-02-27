@@ -2,15 +2,9 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class HealthController : MonoBehaviour
 {
-    [NonSerialized] public UnityEvent<int,DamageType, int, HealthController> BeforeDamageEvent;
-    [NonSerialized] public UnityEvent<int,DamageType, int, HealthController>  AfterDamageEvent;
-    [NonSerialized] public UnityEvent<int,DamageType, int, HealthController>  BeforeHealEvent;
-    [NonSerialized] public UnityEvent<int,DamageType, int, HealthController>  AfterHealEvent;
-    
     public enum DamageType
     {
         None,
@@ -27,71 +21,53 @@ public class HealthController : MonoBehaviour
 
     //config
     public int maxHealth = 100;
-    [FormerlySerializedAs("health")] public int currentHealth = 100;
+    public int currentHealth = 100;
+    [NonSerialized] public UnityEvent<int, DamageType, int, HealthController> AfterDamageEvent = new();
+    [NonSerialized] public UnityEvent<int, int, bool, HealthController> AfterHealEvent = new();
+    [NonSerialized] public UnityEvent<int, DamageType, int, HealthController> BeforeDamageEvent = new();
+    [NonSerialized] public UnityEvent<int, int, bool, HealthController> BeforeHealEvent  = new();
 
-    //State
-    private Coroutine[] _damageEffects;
+    public void Heal(int amount, int ticksLeft = 0, bool canOverHeal = false)
+    {
+        StartCoroutine(HandleHeal(amount, ticksLeft, canOverHeal));
+    }
 
-    private IEnumerator DealAcidDamage(int amount, int ticksLeft)
+    private IEnumerator HandleHeal(int amount, int ticksLeft, bool canOverHeal)
     {
         //Trigger Event
-        BeforeDamageEvent.Invoke(amount, DamageType.Acid, ticksLeft, this);
-        //Deal the damage
-        currentHealth -= amount;
+        BeforeHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
 
-        //Do Extra Effects
+        if (canOverHeal || currentHealth < maxHealth) currentHealth += amount;
 
-        //Trigger Event
-        AfterDamageEvent.Invoke(amount, DamageType.Acid, ticksLeft, this);
-        
-        //Trigger next tick
-        if (ticksLeft > 0)
-        {
-            yield return new WaitForSeconds(acidInterval);
-            StartCoroutine(DealAcidDamage(amount, ticksLeft - 1));
-        }
-    }
+        //Other Effects
 
-    private IEnumerator DealFireDamage(int amount, int ticksLeft)
-    {
-        //Deal the damage
-        currentHealth -= amount;
 
-        //Do Extra Effects
+        //Trigger Effect
+        AfterHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
 
-        //Trigger next tick
-        if (ticksLeft > 0)
-            yield return new WaitForSeconds(acidInterval);
-        DealDamage(amount, DamageType.Acid, ticksLeft - 1);
-    }
-
-    private IEnumerator DealLightningDamage(int amount, int ticksLeft)
-    {
-        //Deal the damage
-        currentHealth -= amount;
-
-        //Do Extra Effects
-
-        //Trigger next tick
-        if (ticksLeft > 0) yield return new WaitForSeconds(acidInterval);
-    }
-
-    public IEnumerator Heal(int amount, int ticksLeft = 0, bool removesAllConditions = false, bool canOverHeal = false)
-    {
-        if (canOverHeal || currentHealth < maxHealth)
-        {
-            currentHealth += amount;
-        }
-        
         if (ticksLeft > 0)
         {
             yield return new WaitForSeconds(healInterval);
-            StartCoroutine(Heal(amount, ticksLeft - 1));
+            StartCoroutine(HandleHeal(amount, ticksLeft - 1, canOverHeal));
         }
+    }
+
+    public void RemoveAllEffects()
+    {
+        StopAllCoroutines();
     }
 
     public void DealDamage(int amount, DamageType damageType = DamageType.None, int ticksLeft = 0)
     {
+        StartCoroutine(HandleDealDamage(amount, damageType, ticksLeft));
+    }
+
+    private IEnumerator HandleDealDamage(int amount, DamageType damageType = DamageType.None, int ticksLeft = 0)
+    {
+        //Trigger Event
+        BeforeDamageEvent.Invoke(amount, DamageType.Acid, ticksLeft, this);
+
+        //Deal Damage
         switch (damageType)
         {
             case DamageType.None:
@@ -99,16 +75,26 @@ public class HealthController : MonoBehaviour
                 break;
             case DamageType.Acid:
                 //Deal damage, then start doing effects
-                StartCoroutine(DealAcidDamage(amount, ticksLeft));
+                currentHealth -= amount;
                 break;
             case DamageType.Fire:
-                StartCoroutine(DealFireDamage(amount, ticksLeft));
+                currentHealth -= amount;
+
                 break;
             case DamageType.Lightning:
-                StartCoroutine(DealLightningDamage(amount, ticksLeft));
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(damageType), damageType, null);
+        }
+
+        //Trigger Event
+        AfterDamageEvent.Invoke(amount, damageType, ticksLeft, this);
+
+        //Trigger next tick if there are ticks left and the damage can trigger again
+        if (ticksLeft > 0 && damageType != DamageType.None)
+        {
+            yield return new WaitForSeconds(acidInterval);
+            StartCoroutine(HandleDealDamage(amount, damageType, ticksLeft - 1));
         }
     }
 }
