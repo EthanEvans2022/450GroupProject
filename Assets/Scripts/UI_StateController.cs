@@ -61,8 +61,8 @@ public class UI_StateController : MonoBehaviour
 
     private void UpdateHealthDisplay()
     {
-        keyboardHealthText.text = "Player's Health: " + keyboardPlayer.health;
-        mouseHealthText.text = "Soul's Health: " + mousePlayer.health;
+        keyboardHealthText.text = "Player's Health: " + keyboardPlayer.currentHealth;
+        mouseHealthText.text = "Soul's Health: " + mousePlayer.currentHealth;
     }
 
     private void UpdateNotificationDisplay(string text)
