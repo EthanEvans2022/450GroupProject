@@ -55,7 +55,7 @@ public class UI_StateController : MonoBehaviour
 
     public void HealthUpdate(HealthController player, int x)
     {
-        player.dealDamage(-x);
+        player.DealDamage(-x);
         UpdateHealthDisplay();
     }
 

@@ -34,6 +34,6 @@ public class TrapController : MonoBehaviour
     {
         print("DEALING " + damageAmount + " " + damageType + " DAMAGE TO: " + target);
         
-        target.dealDamage(damageAmount, damageType);
+        target.DealDamage(damageAmount, damageType);
     }
 }
