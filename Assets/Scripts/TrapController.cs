@@ -31,7 +31,6 @@ public class TrapController : MonoBehaviour
     {
         print("DEALING " + damageAmount + " " + damageType + " DAMAGE TO: " + target);
 
-        target.AfterDamageEvent.AddListener((_, type, _, _) => { print("DAMAGE DEALT OF TYPE: " + type); });
         target.DealDamage(damageAmount, damageType);
     }
 }

@@ -22,10 +22,10 @@ public class HealthController : MonoBehaviour
     //config
     public int maxHealth = 100;
     public int currentHealth = 100;
-    [NonSerialized] public UnityEvent<int, DamageType, int, HealthController> AfterDamageEvent = new();
-    [NonSerialized] public UnityEvent<int, int, bool, HealthController> AfterHealEvent = new();
-    [NonSerialized] public UnityEvent<int, DamageType, int, HealthController> BeforeDamageEvent = new();
-    [NonSerialized] public UnityEvent<int, int, bool, HealthController> BeforeHealEvent  = new();
+    [NonSerialized] public readonly UnityEvent<int, DamageType, int, HealthController> AfterDamageEvent = new();
+    [NonSerialized] public readonly UnityEvent<int, int, bool, HealthController> AfterHealEvent = new();
+    [NonSerialized] public readonly UnityEvent<int, DamageType, int, HealthController> BeforeDamageEvent = new();
+    [NonSerialized] public readonly UnityEvent<int, int, bool, HealthController> BeforeHealEvent  = new();
 
     public void Heal(int amount, int ticksLeft = 0, bool canOverHeal = false)
     {
