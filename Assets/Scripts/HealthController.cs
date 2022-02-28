@@ -23,12 +23,14 @@ public class HealthController : MonoBehaviour
     //config
     public int maxHealth = 100;
     public int currentHealth = 100;
+    
+    //Use these to extend the functionality of the health controller in a global way. Especially derived classes.
     [NonSerialized] public readonly damageEvent AfterDamageEvent = new();
     [NonSerialized] public readonly healEvent AfterHealEvent = new();
     [NonSerialized] public readonly damageEvent BeforeDamageEvent = new();
     [NonSerialized] public readonly healEvent BeforeHealEvent = new();
 
-    public int getHealth()
+    public int GetHealth()
     {
         return currentHealth;}
     public (healEvent, healEvent) Heal(int amount, int ticksLeft = 0, bool canOverHeal = false)
@@ -52,9 +54,6 @@ public class HealthController : MonoBehaviour
         localBeforeHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
 
         if (canOverHeal || currentHealth < maxHealth) currentHealth += amount;
-
-        //Other Effects
-
 
         //Trigger Events
         AfterHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
