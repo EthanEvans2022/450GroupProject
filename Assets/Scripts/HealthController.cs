@@ -1,11 +1,24 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using healEvent = UnityEngine.Events.UnityEvent<int, int, bool, HealthController>;
-using damageEvent = UnityEngine.Events.UnityEvent<int, HealthController.DamageType, int, HealthController>;
+
+//  To use this class with composition, use the following command right above any classes which use a healthController
+// [RequireComponent(typeof(HealthController))]
+// This is preferred to inheritance for simplicity's sake. Use the event listeners to handle the damage controlling.
 
 public class HealthController : MonoBehaviour
 {
+    //Outlets
+
+    //Connections
+    public delegate void DamageEventHandler(int amount, DamageType damageType, int ticksLeft, HealthController target);
+    public delegate void HealEventHandler(int amount, int ticksLeft, bool canOverHeal, HealthController target);
+    public event DamageEventHandler AfterDamageEvent;
+    public event HealEventHandler AfterHealEvent;
+    internal event DamageEventHandler BeforeDamageEvent;
+    public event HealEventHandler BeforeHealEvent;
+    
+    //Config
     public enum DamageType
     {
         None,
@@ -13,51 +26,50 @@ public class HealthController : MonoBehaviour
         Fire,
         Lightning
     }
-
+    
+    public int maxHealth = 100;
     public float healInterval = 1f;
-
     public float acidInterval = 1f;
     public float fireInterval = 1f;
     public float lightningInterval = 1f;
-
-    //config
-    public int maxHealth = 100;
-    public int currentHealth = 100;
     
-    //Use these to extend the functionality of the health controller in a global way. Especially derived classes.
-    [NonSerialized] public readonly damageEvent AfterDamageEvent = new();
-    [NonSerialized] public readonly healEvent AfterHealEvent = new();
-    [NonSerialized] public readonly damageEvent BeforeDamageEvent = new();
-    [NonSerialized] public readonly healEvent BeforeHealEvent = new();
+    //State
+    public int currentHealth = 100;
 
+    //Methods
     public int GetHealth()
     {
-        return currentHealth;}
-    public (healEvent, healEvent) Heal(int amount, int ticksLeft = 0, bool canOverHeal = false)
+        return currentHealth;
+    }
+
+    public void Heal(
+        int amount,
+        int ticksLeft = 0,
+        bool canOverHeal = false,
+        HealEventHandler localBeforeHealEvent = null,
+        HealEventHandler localAfterHealEvent = null
+    )
     {
-        healEvent localBeforeHealEvent = new();
-        healEvent localAfterHealEvent = new();
         StartCoroutine(HandleHeal(amount, ticksLeft, canOverHeal, localBeforeHealEvent, localAfterHealEvent));
-        return (localBeforeHealEvent, localAfterHealEvent);
     }
 
     private IEnumerator HandleHeal(
         int amount,
         int ticksLeft,
         bool canOverHeal,
-        healEvent localBeforeHealEvent,
-        healEvent localAfterHealEvent
+        HealEventHandler localBeforeHealEvent = null,
+        HealEventHandler localAfterHealEvent = null
     )
     {
         //Trigger Events
-        BeforeHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
-        localBeforeHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
+        BeforeHealEvent?.Invoke(amount, ticksLeft, canOverHeal, this);
+        localBeforeHealEvent?.Invoke(amount, ticksLeft, canOverHeal, this);
 
         if (canOverHeal || currentHealth < maxHealth) currentHealth += amount;
 
         //Trigger Events
-        AfterHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
-        localAfterHealEvent.Invoke(amount, ticksLeft, canOverHeal, this);
+        AfterHealEvent?.Invoke(amount, ticksLeft, canOverHeal, this);
+        localAfterHealEvent?.Invoke(amount, ticksLeft, canOverHeal, this);
 
         if (ticksLeft > 0)
         {
@@ -71,25 +83,28 @@ public class HealthController : MonoBehaviour
         StopAllCoroutines();
     }
 
-    public (damageEvent, damageEvent) DealDamage(int amount, DamageType damageType = DamageType.None, int ticksLeft = 0)
+    public void DealDamage(
+        int amount,
+        DamageType damageType = DamageType.None,
+        int ticksLeft = 0,
+        DamageEventHandler localBeforeDamageEvent = null,
+        DamageEventHandler localAfterDamageEvent = null
+    )
     {
-        damageEvent localBeforeDamageEvent = new();
-        damageEvent localAfterDamageEvent = new();
         StartCoroutine(HandleDealDamage(amount, damageType, ticksLeft, localBeforeDamageEvent, localAfterDamageEvent));
-        return (localBeforeDamageEvent, localAfterDamageEvent);
     }
 
     private IEnumerator HandleDealDamage(
         int amount,
         DamageType damageType,
         int ticksLeft,
-        damageEvent localBeforeDamageEvent,
-        damageEvent localAfterDamageEvent
+        DamageEventHandler localBeforeDamageEvent = null,
+        DamageEventHandler localAfterDamageEvent = null
     )
     {
         //Trigger Event
-        BeforeDamageEvent.Invoke(amount, DamageType.Acid, ticksLeft, this);
-        localBeforeDamageEvent.Invoke(amount, DamageType.Acid, ticksLeft, this);
+        BeforeDamageEvent?.Invoke(amount, DamageType.Acid, ticksLeft, this);
+        localBeforeDamageEvent?.Invoke(amount, DamageType.Acid, ticksLeft, this);
         //Deal Damage
         switch (damageType)
         {
@@ -111,8 +126,8 @@ public class HealthController : MonoBehaviour
         }
 
         //Trigger Event
-        AfterDamageEvent.Invoke(amount, damageType, ticksLeft, this);
-        localAfterDamageEvent.Invoke(amount, DamageType.Acid, ticksLeft, this);
+        AfterDamageEvent?.Invoke(amount, damageType, ticksLeft, this);
+        localAfterDamageEvent?.Invoke(amount, DamageType.Acid, ticksLeft, this);
 
         //Trigger next tick if there are ticks left and the damage can trigger again
         if (ticksLeft > 0 && damageType != DamageType.None)

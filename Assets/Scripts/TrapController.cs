@@ -31,8 +31,12 @@ public class TrapController : MonoBehaviour
     {
         print("DEALING " + damageAmount + " " + damageType + " DAMAGE TO: " + target);
 
-        var (before, after) = target.DealDamage(damageAmount, damageType, 3);
         var time = Time.time;
-        before.AddListener((arg0, type, i, arg3) => print("Just this one source" + time));
+        target.DealDamage(
+            damageAmount,
+            damageType,
+            3,
+            localAfterDamageEvent: (arg0, type, i, arg3) => print("Just this one source" + time)
+        );
     }
 }
