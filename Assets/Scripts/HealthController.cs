@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-//  To use this class with composition, use the following command right above any classes which use a healthController
+// To use this class with composition, use the following command right above any classes which use a healthController
 // [RequireComponent(typeof(HealthController))]
 // This is preferred to inheritance for simplicity's sake. Use the event listeners to handle the damage controlling.
 
@@ -61,7 +61,8 @@ public class HealthController : MonoBehaviour
         HealEventHandler localAfterHealEvent = null
     )
     {
-        //Trigger Events
+        // Trigger Events
+        // Events are raised synchronously
         BeforeHealEvent?.Invoke(amount, ticksLeft, canOverHeal, this);
         localBeforeHealEvent?.Invoke(amount, ticksLeft, canOverHeal, this);
 
