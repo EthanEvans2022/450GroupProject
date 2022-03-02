@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KeyboardPlayer
   - MousePlayer
+  - AiEnemy
   layers:
   - Default
   - TransparentFX
