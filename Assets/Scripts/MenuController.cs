@@ -15,6 +15,9 @@ public class MenuController : MonoBehaviour
 	public GameObject nextMenu;
 	private AssetBundle myLoadedAssetBundle;
 	private string[] scenePaths;
+	
+	// States
+	private bool mainMenuOn;
 
 
 	// Methods
@@ -22,6 +25,7 @@ public class MenuController : MonoBehaviour
 	{
 		//print("top of Awake()");
 		instance = this;
+		mainMenuOn = false;
 		Hide();
 	}
 
@@ -59,6 +63,35 @@ public class MenuController : MonoBehaviour
 	{
 		//print("top of ShowMainMenu()");
 		SwitchMenu(mainMenu);
+	}
+	
+	// Toggle the main menu
+	public void ToggleMainMenu()
+	{
+		print("top of ToggleMainMenu()");
+		
+		// Turn off all menus
+		mainMenu.SetActive(false);
+		optionsMenu.SetActive(false);
+		levelMenu.SetActive(false);
+		nextMenu.SetActive(false);
+		Hide();
+		
+		
+		if (mainMenuOn)
+		{
+			print("in ToggleMainMenu(), in the if");
+			mainMenu.SetActive(false);
+			mainMenuOn = false;
+			Hide();
+		}
+		else
+		{
+			print("in ToggleMainMenu(), in the else");
+			mainMenu.SetActive(true);
+			mainMenuOn = true;
+			Show();
+		}
 	}
 
 	public void ShowOptionsMenu()

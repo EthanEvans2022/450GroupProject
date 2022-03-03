@@ -8,10 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Mark's Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: c3c2263a8fa924a2386acef9fb7a7abd
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/SuccessScene.unity.unity
     guid: 6613b539162324809ae5ee3bd89381b6
+  - enabled: 1
+    path: Assets/Scenes/mark_w5.unity
+    guid: ac4873960798c4792831b04cbeeef4f4
+  - enabled: 1
+    path: Assets/Scenes/LightingTest.unity
+    guid: a4365521bd834244297f0ea3a5ca06f0
+  - enabled: 1
+    path: Assets/Scenes/ControlsPOC.unity
+    guid: 4acbcdd05bf8e425dbedf29505d85c9d
   m_configObjects: {}

@@ -22,6 +22,7 @@ public class KeyboardController : MonoBehaviour
     */
     //States
     private bool isCombined;
+	
     //Methods
     void Start(){
        tf = GetComponent<Transform>(); 
@@ -51,6 +52,14 @@ public class KeyboardController : MonoBehaviour
         if (isCombined){
            CombinedControls(); 
         }
+
+		if (Input.GetKeyDown(KeyCode.Return)){
+			DialogueController.dialogueControllerInstance.NextText();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			MenuController.instance.ToggleMainMenu();
+		}
     }
 
     private void StandardControls(){
