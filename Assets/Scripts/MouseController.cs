@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour 
 {
-    //Outputs
+    //Outlets
     protected Transform tf;
     protected Rigidbody2D rb;
+    private Animator[] _animators;
 
     //Configurations
     public float speed;
@@ -26,6 +27,8 @@ public class MouseController : MonoBehaviour
        tf = GetComponent<Transform>(); 
        rb = GetComponent<Rigidbody2D>();
        movementType = MovementType.Follow;
+       _animators = GetComponentsInChildren<Animator>();
+       
     }
     void Update(){
         InputListener();
@@ -66,6 +69,8 @@ public class MouseController : MonoBehaviour
         }
     }
 
+
+
     //Move in the direction of the mouse is
     private void FollowMouse(){
         Vector3 mousePos = GetMouseLocation();
@@ -74,6 +79,13 @@ public class MouseController : MonoBehaviour
         Vector2 direction = diff.magnitude < mouseBuffer ? new Vector2(0,0) : new Vector2(diff.x, diff.y);
         //Vector3 diff =currPos - mousePos;     Happy little accident: character repulsed from mouse, can be fun chase AI later 
         rb.velocity = direction.normalized * speed;
+        foreach (var animator in _animators)
+        {
+            //This throws a warning when movementX and movementY don't exist on an animator
+        animator.SetFloat("MovementX", rb.velocity.x);
+        animator.SetFloat("MovementY", rb.velocity.y);
+            
+        }
     }
 
     private Vector3 GetMouseLocation(){
