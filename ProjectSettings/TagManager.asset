@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KeyboardPlayer
   - MousePlayer
+  - CombinedPlayer
   layers:
   - Default
   - TransparentFX
