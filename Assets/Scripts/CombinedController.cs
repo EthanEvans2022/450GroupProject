@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class CombinedController : MovementHandler 
 {
@@ -8,6 +9,7 @@ public class CombinedController : MovementHandler
     protected SpriteRenderer sprite_renderer;
     protected Rigidbody2D rb;
     protected CapsuleCollider2D capsuleCollider;
+    public GameObject light2D;
     public GameObject keyboardPrefab;
     public GameObject mousePrefab;
     public GameObject projectilePrefab;
@@ -74,14 +76,8 @@ public class CombinedController : MovementHandler
         rb.Sleep();
         capsuleCollider.enabled = false;
         sprite_renderer.enabled = false;
-        Transform[] children = GetComponentsInChildren<Transform>();
-        foreach(Transform child in children){
-            if(child.gameObject.name == "Light 2D"){
-                Debug.Log("deactivating light");
-                child.gameObject.SetActive(false);
-            }
-        }
-        //light2d.SetActive(false);
+        light2D.SetActive(false);
+
         //Spawn new keyboardPlayer + mousePlayer at current location
         GameObject keyboardPlayer = Instantiate(keyboardPrefab, transform.position, Quaternion.identity, transform);
         keyboardPlayer.transform.position = transform.position;
@@ -96,17 +92,9 @@ public class CombinedController : MovementHandler
         rb.WakeUp();
         capsuleCollider.enabled = true;
         sprite_renderer.enabled = true;
-        //BUG: Can't get light working again when recombining
-        Transform[] children = GetComponentsInChildren<Transform>();
-        foreach(Transform child in children){
-            Debug.Log(child.gameObject.name);
-            if(child.gameObject.name == "Light 2D"){
-                Debug.Log("activating light");
-                child.gameObject.SetActive(true);
-                Debug.Log(child.gameObject.activeSelf);
-            }
-        }
+        light2D.SetActive(true);
 
+        //Destroy split characters
         GameObject keyboardPlayer = GetComponentInChildren<KeyboardController>().gameObject;
         GameObject mousePlayer = GetComponentInChildren<MouseController>().gameObject;
 
