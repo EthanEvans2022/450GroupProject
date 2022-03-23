@@ -29,15 +29,11 @@ public class KeyboardController : MonoBehaviour
        rb = GetComponent<Rigidbody2D>();
        sprite_renderer = GetComponent<SpriteRenderer>();
        isCombined = true;
-       CombineCharacters();
+       //CombineCharacters();
     }
 
     void Update(){
-        if (isCombined)
-        {
-            mousePlayer.transform.position = transform.position;
-        }
-        InputListener();
+        StandardControls(); 
     }
 
     private void InputListener(){
@@ -46,11 +42,6 @@ public class KeyboardController : MonoBehaviour
         StandardControls();
         //Combine Control
         if (Input.GetKeyDown(KeyCode.C)){
-            isCombined = !isCombined;
-            CombineCharacters();
-        }
-        if (isCombined){
-           CombinedControls(); 
         }
 
 		if (Input.GetKeyDown(KeyCode.Return)){
@@ -62,7 +53,7 @@ public class KeyboardController : MonoBehaviour
 		}
     }
 
-    private void StandardControls(){
+    public void StandardControls(){
         Vector2 direction = Vector2.zero;
         if (Input.GetKey(KeyCode.A))
             direction += new Vector2(-1, 0);
@@ -90,22 +81,23 @@ public class KeyboardController : MonoBehaviour
     protected void CombineCharacters(){
         if(isCombined){
             //Deactivate mousePlayer
-            mousePlayer.SetActive(false);
+            //mousePlayer.SetActive(false);
             //Change current keyboard player sprite
-            sprite_renderer.sprite = combinedSprite;
+            //sprite_renderer.sprite = combinedSprite;
             //Update speed
-            speed *= speedPenalty;
+            //speed *= speedPenalty;
         }
         else{
             //Activate mousePlayer
-            mousePlayer.SetActive(true);
-            mousePlayer.transform.position = tf.position;
+            //mousePlayer.SetActive(true);
+            //mousePlayer.transform.position = tf.position;
             //Change keyboard player sprite
-            sprite_renderer.sprite = seperateSprite;
+
+            //sprite_renderer.sprite = seperateSprite;
             //TEMP: reset up direction
-            tf.up = new Vector3(0,1,0);
+            //tf.up = new Vector3(0,1,0);
             //Update speed
-            speed /= speedPenalty;
+            //speed /= speedPenalty;
         }
     }
     private Vector3 GetMouseLocation(){
