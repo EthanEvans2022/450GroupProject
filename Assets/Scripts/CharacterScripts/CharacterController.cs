@@ -12,11 +12,7 @@ public class CharacterController : MonoBehaviour
     public GameObject keyboardInstance;
     public GameObject mouseInstance;
     public GameObject combinedInstance;
-    private HealthController _keyboardHealth;
-    private HealthController _mouseHealth;
-    private HealthController _combinedHealth;
-
-    private HealthController _myHealthController;
+    
     //States
     public bool isCombined = true;
 
@@ -28,8 +24,6 @@ public class CharacterController : MonoBehaviour
         combinedInstance = combined.gameObject;
         keyboardInstance = keyboard.gameObject;
         mouseInstance = mouse.gameObject;
-
-        _myHealthController = GetComponent<HealthController>();
         
         CombineCharacters();
         SpawnCharacter(combinedInstance, transform.position, Quaternion.identity); //This sets us up at the right location

@@ -127,4 +127,4 @@ MonoBehaviour:
   triggerableEntities:
   - KeyboardPlayer
   damageAmount: 10
-  damageType: 1
+  damageType: 0
