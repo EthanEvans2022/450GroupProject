@@ -1,21 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CharacterController : MonoBehaviour
 {
     //Configurations
-    private GameObject _keyboardInstance;
-    private GameObject _mouseInstance;
-    private GameObject _combinedInstance;
     public CombinedController combined;
     public KeyboardController keyboard;
     public MouseController mouse;
     
+    //Outlets
+    public GameObject keyboardInstance;
+    public GameObject mouseInstance;
+    public GameObject combinedInstance;
     private HealthController _keyboardHealth;
     private HealthController _mouseHealth;
     private HealthController _combinedHealth;
-    
-    public float speed = 10;
 
+    private HealthController _myHealthController;
     //States
     public bool isCombined = true;
 
@@ -24,12 +25,14 @@ public class CharacterController : MonoBehaviour
     //Methods
     private void Start()
     {
-        _combinedInstance = combined.gameObject;
-        _keyboardInstance = keyboard.gameObject;
-        _mouseInstance = mouse.gameObject;
+        combinedInstance = combined.gameObject;
+        keyboardInstance = keyboard.gameObject;
+        mouseInstance = mouse.gameObject;
+
+        _myHealthController = GetComponent<HealthController>();
         
         CombineCharacters();
-        SpawnCharacter(_combinedInstance, transform.position, Quaternion.identity); //This sets us up at the right location
+        SpawnCharacter(combinedInstance, transform.position, Quaternion.identity); //This sets us up at the right location
         if(!isCombined) SplitCharacters();
     }
 
@@ -61,22 +64,22 @@ public class CharacterController : MonoBehaviour
     private void SplitCharacters()
     {
         //Activate all components
-        var position = _combinedInstance.transform.position;
+        var position = combinedInstance.transform.position;
         SpawnCharacter(keyboard.gameObject, position, Quaternion.identity);
         SpawnCharacter(mouse.gameObject, position, Quaternion.identity);
         
         //Destroy split characters
-        _combinedInstance.SetActive(false);
+        combinedInstance.SetActive(false);
     }
 
     private void CombineCharacters()
     {
         //Activate all components
-        SpawnCharacter(combined.gameObject, _keyboardInstance.transform.position, Quaternion.identity);
+        SpawnCharacter(combined.gameObject, keyboardInstance.transform.position, Quaternion.identity);
         
         //Destroy split characters
-        _keyboardInstance.SetActive(false);
-        _mouseInstance.SetActive(false);
+        keyboardInstance.SetActive(false);
+        mouseInstance.SetActive(false);
     }
 }
     

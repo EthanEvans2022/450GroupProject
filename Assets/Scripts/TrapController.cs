@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrapController : MonoBehaviour
@@ -20,23 +21,32 @@ public class TrapController : MonoBehaviour
         print("Trigger");
 
         foreach (var c in triggerableEntities)
-            if (col.gameObject.GetComponent<HealthController>() && col.gameObject.CompareTag(c))
+        {
+            var h = col.gameObject.GetComponent<HealthController>();
+            if (!h)
             {
-                DealDamage(col.gameObject.GetComponent<HealthController>());
+                h = col.gameObject.GetComponentInParent<HealthController>();
+            }
+
+            if (h && (col.gameObject.CompareTag(c) || h.gameObject.CompareTag(c)))
+            {
+                DealDamage(h);
                 break;
             }
+        }
     }
 
     private void DealDamage(HealthController target)
-    {
-        print("DEALING " + damageAmount + " " + damageType + " DAMAGE TO: " + target);
+        {
+            print("DEALING " + damageAmount + " " + damageType + " DAMAGE TO: " + target);
 
-        var time = Time.time;
-        target.DealDamage(
-            damageAmount,
-            damageType,
-            3,
-            localAfterDamageEvent: (arg0, type, i, arg3) => print("Just this one source" + time)
-        );
-    }
+            var time = Time.time;
+            target.DealDamage(
+                damageAmount,
+                damageType,
+                3,
+                localAfterDamageEvent: (arg0, type, i, arg3) => print("Just this one source" + time)
+            );
+        }
+    
 }

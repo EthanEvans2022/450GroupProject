@@ -123,28 +123,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &15752869
+--- !u!1001 &154669098
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3841822625097903725, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Name
+      value: Keyboard Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942723517980219719, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212770065109109632, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212770065109109632, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212770065109109632, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450248, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450248, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5530801
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450248, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94186866
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450248, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.06224014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450248, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -176,7 +196,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450255, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_Name
-      value: Combined Character
+      value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136628099387863998, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Name
+      value: Mouse Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136628099387863998, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21e55761495344af2be879937d26b0d8, type: 3}
@@ -291,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042110073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
