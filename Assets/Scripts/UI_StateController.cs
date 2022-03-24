@@ -35,8 +35,8 @@ public class UI_StateController : MonoBehaviour
         if (mousePlayer.gameObject.activeSelf)
         {
             lineRenderer.positionCount = 2;
-            lineRenderer.SetPosition(0, mousePlayer.gameObject.transform.localPosition);
-            lineRenderer.SetPosition(1, keyboardPlayer.gameObject.transform.localPosition);
+            lineRenderer.SetPosition(0, mousePlayer.gameObject.transform.position);
+            lineRenderer.SetPosition(1, keyboardPlayer.gameObject.transform.position);
         }
         else
         {
@@ -88,11 +88,14 @@ public class UI_StateController : MonoBehaviour
     {
         // Debug.Log(mousePlayer.transform.position);
         // Debug.Log(keyboardPlayer.transform.position);
-        var distance = Math.Sqrt(Math.Pow(mousePlayer.transform.position.x - keyboardPlayer.transform.position.x, 2)
-                                 + Math.Pow(
-                                     mousePlayer.gameObject.transform.position.y -
-                                     keyboardPlayer.gameObject.transform.position.y,
-                                     2));
+        var distance = Math.Sqrt(
+            Math.Pow(mousePlayer.transform.position.x - keyboardPlayer.transform.position.x, 2)
+            + Math.Pow(
+                mousePlayer.gameObject.transform.position.y -
+                keyboardPlayer.gameObject.transform.position.y,
+                2
+            )
+        );
         //Debug.Log(distance);
         if (distance > 5)
         {

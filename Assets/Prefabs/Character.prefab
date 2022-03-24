@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 8
   m_Name: Character
   m_TagString: CombinedPlayer
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -104,12 +104,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
       propertyPath: m_Name
       value: Combined Character
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
