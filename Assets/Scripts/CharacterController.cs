@@ -24,7 +24,12 @@ public class CharacterController : MonoBehaviour
     //Methods
     private void Start()
     {
-       _combinedInstance = SpawnCharacter(combined.gameObject, transform.position, Quaternion.identity);
+        _combinedInstance = combined.gameObject;
+        _keyboardInstance = keyboard.gameObject;
+        _mouseInstance = mouse.gameObject;
+        
+        CombineCharacters();
+        SpawnCharacter(_combinedInstance, transform.position, Quaternion.identity); //This sets us up at the right location
         if(!isCombined) SplitCharacters();
     }
 
@@ -46,32 +51,32 @@ public class CharacterController : MonoBehaviour
     }
 
     //Handles the splitting of characters
-    private GameObject SpawnCharacter(GameObject obj, Vector3 position, Quaternion rotation)
+    private void SpawnCharacter(GameObject obj, Vector3 position, Quaternion rotation)
     {
-        var c = Instantiate(obj, position, rotation);
-        
-        return c; 
+        obj.SetActive(true);
+        obj.transform.position = position;
+        obj.transform.rotation = rotation;
     }
     
     private void SplitCharacters()
     {
         //Activate all components
         var position = _combinedInstance.transform.position;
-        _keyboardInstance = SpawnCharacter(keyboard.gameObject, position, Quaternion.identity);
-        _mouseInstance = SpawnCharacter(mouse.gameObject, position, Quaternion.identity);
+        SpawnCharacter(keyboard.gameObject, position, Quaternion.identity);
+        SpawnCharacter(mouse.gameObject, position, Quaternion.identity);
         
         //Destroy split characters
-        Destroy(_combinedInstance);
+        _combinedInstance.SetActive(false);
     }
 
     private void CombineCharacters()
     {
         //Activate all components
-        _combinedInstance = Instantiate(combined.gameObject, _keyboardInstance.transform.position, Quaternion.identity);
+        SpawnCharacter(combined.gameObject, _keyboardInstance.transform.position, Quaternion.identity);
         
         //Destroy split characters
-        Destroy(_keyboardInstance);
-        Destroy(_mouseInstance);
+        _keyboardInstance.SetActive(false);
+        _mouseInstance.SetActive(false);
     }
 }
     
