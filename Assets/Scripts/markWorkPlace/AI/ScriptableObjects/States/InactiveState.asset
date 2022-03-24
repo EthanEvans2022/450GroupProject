@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5986a7dce75ed4b98907d8f950301a42, type: 3}
+  m_Name: InactiveState
+  m_EditorClassIdentifier: 
+  actions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: 684fb662a5c2f4920a3cfcac79c5da2c, type: 2}
+    trueState: {fileID: 11400000, guid: 7b2daef7759634f3a8f8f0a5ca284520, type: 2}
+    falseState: {fileID: 11400000}
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
