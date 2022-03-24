@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4218319191967450248}
   - component: {fileID: 4218319191967450251}
-  - component: {fileID: 4218319191967450250}
   - component: {fileID: 4218319191967450253}
   - component: {fileID: 4218319191967450252}
+  - component: {fileID: 5323485697558086305}
   m_Layer: 8
   m_Name: Combined Character
   m_TagString: CombinedPlayer
@@ -88,24 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4218319191967450250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4218319191967450255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4866d3d535453486f86a7bb95e798a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  light2D: {fileID: 4218319191978169660}
-  keyboardPrefab: {fileID: 2787991758707097224, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
-  mousePrefab: {fileID: 4729020521779514096, guid: ee7d41058bd4c40539d54ba9e82462d0, type: 3}
-  projectilePrefab: {fileID: 50327302617615270, guid: 97dd76b36020b46a8a5f735ea40dbfb2, type: 3}
-  speed: 10
-  isCombined: 1
 --- !u!50 &4218319191967450253
 Rigidbody2D:
   serializedVersion: 4
@@ -143,6 +125,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.75, y: 0.9375}
   m_Direction: 0
+--- !u!114 &5323485697558086305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218319191967450255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4866d3d535453486f86a7bb95e798a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 50327302617615270, guid: 97dd76b36020b46a8a5f735ea40dbfb2, type: 3}
+  speed: 10
+  isCombined: 1
 --- !u!1 &4218319191978169660
 GameObject:
   m_ObjectHideFlags: 0
