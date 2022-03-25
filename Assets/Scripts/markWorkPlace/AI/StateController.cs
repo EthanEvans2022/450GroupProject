@@ -11,7 +11,7 @@ public class StateController : MonoBehaviour {
 
     public GameObject keyboardPlayer;
     public GameObject mousePlayer;
-    public GameController enemyStats;
+    // public GameController enemyStats;
     public Sprite normalSprite;
     public Sprite attackingSprite;
     public Transform eyes;
