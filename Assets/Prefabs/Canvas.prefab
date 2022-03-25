@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 548744753258749060}
   - component: {fileID: 548744753258749061}
   m_Layer: 5
-  m_Name: BackButton
+  m_Name: LevelSelectBackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,9 +813,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6858300978758746588}
+      - m_Target: {fileID: 7084290547454128684}
         m_TargetAssemblyTypeName: LoadSceneTwoBehavior, Assembly-CSharp
-        m_MethodName: NextLevel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &548744753592293945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 548744753957900822}
   - component: {fileID: 548744753957900823}
   m_Layer: 5
-  m_Name: BackButton
+  m_Name: OptionsBackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1797,7 +1797,7 @@ GameObject:
   - component: {fileID: 548744754006410703}
   - component: {fileID: 548744754006410700}
   m_Layer: 5
-  m_Name: BackButton
+  m_Name: NextLevelBackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1905,7 +1905,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 548744754006410703}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &548744754071138196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,7 +3519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170478259438847382}
-  - component: {fileID: 6858300978758746588}
+  - component: {fileID: 948955485563979009}
   m_Layer: 0
   m_Name: NextLevelButtonBehavior
   m_TagString: Untagged
@@ -3530,7 +3542,7 @@ Transform:
   m_Father: {fileID: 548744753592293946}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6858300978758746588
+--- !u!114 &948955485563979009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3539,6 +3551,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7084290547454128684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99814384d78a24c2dbaa92563a6d54d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2444d10bb0dfc400881c54d37000dd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
