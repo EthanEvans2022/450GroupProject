@@ -56,19 +56,27 @@ public class MenuController : MonoBehaviour
 		// Turn on requested menu
 		Show();
 		someMenu.SetActive(true);
+
+		//if the someMenu is mainMenu then set the state
+		if (someMenu == mainMenu)
+		{
+			mainMenuOn = true;
+		}
 	}
 
 	// Even simpler switch menu functions:
 	public void ShowMainMenu()
 	{
 		//print("top of ShowMainMenu()");
-		SwitchMenu(mainMenu);
+		//SwitchMenu(mainMenu);
+		mainMenuOn = false;
+		ToggleMainMenu();
 	}
 	
 	// Toggle the main menu
 	public void ToggleMainMenu()
 	{
-		print("top of ToggleMainMenu()");
+		//print("top of ToggleMainMenu()");
 		
 		// Turn off all menus
 		mainMenu.SetActive(false);
@@ -80,14 +88,14 @@ public class MenuController : MonoBehaviour
 		
 		if (mainMenuOn)
 		{
-			print("in ToggleMainMenu(), in the if");
+			//print("in ToggleMainMenu(), in the if");
 			mainMenu.SetActive(false);
 			mainMenuOn = false;
 			Hide();
 		}
 		else
 		{
-			print("in ToggleMainMenu(), in the else");
+			//print("in ToggleMainMenu(), in the else");
 			mainMenu.SetActive(true);
 			mainMenuOn = true;
 			Show();
@@ -108,7 +116,7 @@ public class MenuController : MonoBehaviour
 
 	public void ShowNextMenu()
 	{
-		print("top of ShowNextMenu()");
+		//print("top of ShowNextMenu()");
 		SwitchMenu(nextMenu);
 	}
 	
