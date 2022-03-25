@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MouseController : MonoBehaviour 
 {
     //Outputs
     protected Transform tf;
     protected Rigidbody2D rb;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
 
     //Configurations
     public float speed;
@@ -23,6 +25,10 @@ public class MouseController : MonoBehaviour
 
     //Methods
     void Start(){
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
+        
        tf = GetComponent<Transform>(); 
        rb = GetComponent<Rigidbody2D>();
        movementType = MovementType.Follow;
@@ -62,7 +68,8 @@ public class MouseController : MonoBehaviour
     //Move to where the player clicks
     private void Teleport(){
         if(Input.GetMouseButtonDown(0)){
-            tf.position = GetMouseLocation();
+            //tf.position = GetMouseLocation();
+            navMeshAgent.destination = GetMouseLocation();
         }
     }
 
