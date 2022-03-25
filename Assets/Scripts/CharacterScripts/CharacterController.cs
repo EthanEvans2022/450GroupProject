@@ -33,9 +33,18 @@ public class CharacterController : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.C)) ToggleCharacterCombined();
+        HandleMenuControls();
     }
 
+    private void HandleMenuControls(){
+        if (Input.GetKeyDown(KeyCode.Return)){
+            DialogueController.dialogueControllerInstance.NextText();
+        }
 
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            MenuController.instance.ToggleMainMenu();
+        }
+    }
 
     //Toggle Combined or Split
     public void ToggleCharacterCombined()

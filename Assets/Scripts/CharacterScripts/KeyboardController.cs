@@ -24,25 +24,9 @@ public class KeyboardController : MonoBehaviour
        //CombineCharacters();
     }
 
-    void Update(){
-        StandardControls(); 
-    }
-
-    private void InputListener(){
-        //Movement Controls
-        //On by default, but could change for when combined 
+    void Update()
+    {
         StandardControls();
-        //Combine Control
-        if (Input.GetKeyDown(KeyCode.C)){
-        }
-
-		if (Input.GetKeyDown(KeyCode.Return)){
-			DialogueController.dialogueControllerInstance.NextText();
-		}
-
-		if (Input.GetKeyDown(KeyCode.Escape)){
-			MenuController.instance.ToggleMainMenu();
-		}
     }
 
     public void StandardControls(){

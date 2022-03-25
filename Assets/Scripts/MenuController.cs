@@ -76,7 +76,7 @@ public class MenuController : MonoBehaviour
 	// Toggle the main menu
 	public void ToggleMainMenu()
 	{
-		//print("top of ToggleMainMenu()");
+		// print("top of ToggleMainMenu()");
 		
 		// Turn off all menus
 		mainMenu.SetActive(false);
