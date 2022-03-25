@@ -1,0 +1,3295 @@
+fileFormatVersion: 2
+guid: c75cd9c9ad6ca8e4eb16b734777ba816
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WeakCharacter_8
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 2422
+        width: 151
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050e94a9e5ed4e344a5c3bb4d48a6f33
+      internalID: 809353831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_9
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 2400
+        width: 179
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5799af3a48d264bbfd21211c5b7081
+      internalID: 1468216621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_10
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 2402
+        width: 178
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9c4d6bb67dd0b4592c0da272871c44
+      internalID: 957357409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_11
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 2419
+        width: 180
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f004d7473968afe4ead4118d91f8477b
+      internalID: -1929198273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2180
+        width: 178
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf75525f4aeb247419aa15c840606cc6
+      internalID: -1733976718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_23
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 2019
+        width: 123
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc941fed07e0bd943ab4c8635aba274f
+      internalID: 1724967222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_24
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 2023
+        width: 124
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c758446301e56bf4fab1ddf94e851823
+      internalID: 554298947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_25
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 2019
+        width: 122
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d1ff8e62405aa4c9abe6b10380e548
+      internalID: 1929912964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_28
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 2031
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd92b8f50a576cf4bb8de574fd9cd52c
+      internalID: 538767287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_32
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 2032
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c286c8dab47c54aac983f0b7185e12
+      internalID: 1622602431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_36
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1881
+        width: 122
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fc143d485f7e740bc0c5099b35cadb
+      internalID: -1245953969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_39
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1877
+        width: 110
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cdc34d2e90eb1459a575aaa36163ed
+      internalID: -429932674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_40
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1969
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e8b3b7c6507be44af0c8599455e29c
+      internalID: -362108082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_41
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1970
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a884007e02a224e4dada32a29077db2d
+      internalID: -1987050590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_42
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1745
+        width: 122
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20566be836458df48ac28d01bb4a9cab
+      internalID: -614790254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_43
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1753
+        width: 121
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a008fa9164991aa4e991f08e5425bfe7
+      internalID: 1112390183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_44
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1771
+        width: 115
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10bb10044768904ea4eafac257bb16f
+      internalID: -581117101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_45
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1779
+        width: 115
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7865fc7c90895a4c8a5ca645d6996be
+      internalID: 1618365881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_47
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1753
+        width: 122
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8d719a56a4e2f45b266d6935fcb309
+      internalID: -1168919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_49
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1756
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb0d8bbceb28174d81eddc8747a057e
+      internalID: 1819851166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_51
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1604
+        width: 100
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01517cdcdee9c454fb76aa3510a77b7d
+      internalID: 1496763119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_52
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1592
+        width: 122
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b29be13e35ec743b3427a3a9e598d2
+      internalID: 1598422066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_53
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1572
+        width: 124
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d743bb89edfb67e4498e09c9d244f94c
+      internalID: 882219694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_54
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1611
+        width: 124
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011bda68955714a4783331aab3c74bbe
+      internalID: 177286769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_55
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1639
+        width: 126
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99968c18b1658e24a9b7385f2c0e70cb
+      internalID: -1215904658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_56
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1635
+        width: 120
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09e6f94e13e3aa46905dbafce55949b
+      internalID: 1230922837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_57
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1623
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63eac9087b5b2b41b3bb6ec3e5753ab
+      internalID: -63784220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_58
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1435
+        width: 118
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5edc23672db458408b64aa2c4a420a1
+      internalID: -1102730956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_59
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1451
+        width: 120
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb13732762c273542a16188ad2a6ee30
+      internalID: 1132220758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_60
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1456
+        width: 116
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4af30da9e88bd443b0f282d3f2c1e25
+      internalID: 697050015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_61
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1443
+        width: 118
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3758758daa0b048b2774d32477a0cb
+      internalID: 774877309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_63
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1462
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d05f62dab2c75408112fe60e2f2e8b
+      internalID: -978227275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_64
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1460
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e0c0a80987d22408f47e740bc9f6a9
+      internalID: 1817798627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_66
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1336
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca51d05674c8e3439c014bdd7e14902
+      internalID: -183712761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_67
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1336
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdccfa50d50c2e04790ccb423cfbb418
+      internalID: 1792810350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_69
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1236
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3103dfb0e51aea4bbf1058e8976f81c
+      internalID: -647736060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_70
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1230
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525345788afe97d43ae507f9d7f25f97
+      internalID: -694141085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_71
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1234
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced1628fd90e7cf419e4adfbb757fc7e
+      internalID: 1815928247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_72
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1228
+        width: 66
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cd855e1807d2147bc9f0bb34342c53
+      internalID: 592909274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_73
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1222
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2751f6e211519e749a7532ba281e1829
+      internalID: 1934422588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_74
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1221
+        width: 81
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c7320818ca9b54cacbc2a11f3953c4
+      internalID: -668372778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_75
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1236
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dcf4bcbc4a4854abf23eca08f115d6
+      internalID: 1908569328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_76
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1233
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f91a953bed5f4489998ea9274ef393
+      internalID: -100771742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_77
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1233
+        width: 85
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd7c5a821d4d12448fd3c0e435c291a
+      internalID: 1227767135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_78
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1242
+        width: 85
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00e9d31874618a4b85cd53d71deeb70
+      internalID: 1395574899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_79
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1230
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74c35278368bce48a5824c6651fb09b
+      internalID: -1533352588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_81
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1149
+        width: 60
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d16aebb434f5c49a943622149c37b2
+      internalID: -1057699137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_82
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1136
+        width: 62
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a730c5bcbc76edc43bf1097d22df6dbc
+      internalID: -1360045124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_83
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1144
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e942c769072eb1e40ab4c1d84e4be230
+      internalID: -1951968478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_85
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1145
+        width: 56
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a407dc6cb6083e48b1bdd82a9bc04ea
+      internalID: 1145845825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_86
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1148
+        width: 58
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098f17def191ae24d89bc0af4aba241f
+      internalID: -1857060590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_87
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1124
+        width: 60
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754587e8d1d5ad644858bc6c30e1e22e
+      internalID: -1920380239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_88
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1144
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ceaed8edd8d8c044a02d6d966b40460
+      internalID: 1133682783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_89
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1141
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f5f7326764d794582059112182391a
+      internalID: 46209579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_90
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1128
+        width: 72
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a23bbd5d20e0514e8c42ddc4b3d8564
+      internalID: 945010888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_91
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1136
+        width: 62
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90725526ed05d3041bfbae08036813f5
+      internalID: 514779574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_94
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1038
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1410c32a2f533ee4491c445cd2c40a03
+      internalID: -1117811626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_95
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1038
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d5fcdcc91de15499cc8478f07f2fac
+      internalID: 1357909842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_96
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1035
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213fb9c64f70a794197081a79ed92140
+      internalID: -1311979966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_97
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1034
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de2b7da9d7e3cf49ba60405d2ea9c22
+      internalID: 1879886957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_98
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1051
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c31c0b60b3bbf4f85b100fd8bb9dab
+      internalID: -566273446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_99
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1038
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e167215108776c4891a8474e1ae30f9
+      internalID: 1461749207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_100
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1038
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94398a4d061a40e47b401bbca99192a0
+      internalID: 7582644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_104
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 949
+        width: 22
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea6b75ae47788244970db85ab7b205f
+      internalID: 2136878961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_105
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 967
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e588df71355f21843ade4b2d72a23bb5
+      internalID: 1344602157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_106
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 949
+        width: 24
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4d7b3d6a7757549bcec150006f13f0
+      internalID: 1413063571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_108
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 866
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9224eb399c1ad04693e072427b37d65
+      internalID: -1758716810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_109
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 857
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b58fe4448a67b743bfdfd270ca408a0
+      internalID: 1373941331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_110
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 878
+        width: 63
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d313d8631f993c04894876a6fcd1f30e
+      internalID: 681027679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_111
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 874
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01450c5d83ebe7e4f9229496c3bb557a
+      internalID: 1153259223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_112
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 857
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80721f34d0cc1f549b4fc276b81260af
+      internalID: 1214650803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_113
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 868
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c289c814aa69eb34aa7423c6266b0001
+      internalID: -529739834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_114
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 878
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8beec8a31c57e4a8261a98b8a29b78
+      internalID: -819429812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_117
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 784
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c20489504a177409c40d032904d684
+      internalID: -862983540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_118
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 789
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5a39be4dd59b34a8e91a2151a41286
+      internalID: -1114496981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_119
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 792
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbc189d62dc6c14dad71afbe7a928d3
+      internalID: 1506566614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_120
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 780
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bd77ce49bbef241a32d594f54a8b62
+      internalID: -1866605071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_121
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 793
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ad0bab3c8d75f4c8388d32acf64347
+      internalID: -999011908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_122
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 776
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634293b4149030f4f936445e3fc2e4bb
+      internalID: 855845647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_123
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 777
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11393a3027a31b04c84dd1e5fcc18350
+      internalID: 1267986412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_124
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 777
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f49cec4064d0c7488e8e149682fbc81
+      internalID: 1344520691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_126
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 769
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304fd7a15ba27504a9e9fefb511f0e0b
+      internalID: 1312746917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_127
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 792
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9fc191bb6740d4e866ce73ecec3bf6
+      internalID: -896281508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_130
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 780
+        width: 58
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1304573c6a802664190bd0d6f7b43dbf
+      internalID: 1038637897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_131
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 600
+        width: 86
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f747ff885298d469fb87bf38548471
+      internalID: 845442979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_132
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 704
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932f534d62d09504897f2ff2f278ebab
+      internalID: -331621668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_133
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 696
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f48600947254044bf538fa96d81594
+      internalID: -1874656316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_136
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 712
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098e05b3b9a06d8499ecf82d71c43217
+      internalID: 1993384521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_137
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 703
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00003a71e37624143bd74ac8beb827b2
+      internalID: -1328374022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_139
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 518
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd191314b0409f640836d753cd6204e9
+      internalID: -914176802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_140
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 514
+        width: 25
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bb2c0d74440b64a94ff940c351cded
+      internalID: -303584668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_141
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 514
+        width: 24
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca3f101ce76f624296b65a5d28a2d25
+      internalID: -1732902906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_142
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 510
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89370b234258b34e9abcb60be7d5ede
+      internalID: -1148214617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_143
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 526
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0ac8effd40c3e4fac65f596bed1a0b
+      internalID: 1016467419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_144
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 509
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd85a584fc5bbc14a84c2fe8d9e09904
+      internalID: 1488273017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_145
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 522
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1c9f1a9c386ad4c9ff625709fc81d8
+      internalID: -1887528249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_146
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 526
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8674382f570d7f4468b791b1abbedd09
+      internalID: -460573015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_147
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 510
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b491cb38de1e34c8b78ef9d9fabc30
+      internalID: 1466466865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_148
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 518
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f228a146b54934a935716dd011ca21
+      internalID: 1488110594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_149
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 510
+        width: 24
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af7455c38a347742846c893a190a62a
+      internalID: 1637667702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_150
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 469
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0291e28d588574790d70db62807ffc
+      internalID: 1309985633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_151
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 466
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646995f1f1c0016459adfa81db3490b8
+      internalID: -1882943467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_152
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 472
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489cf63a2b10da64a87469f7e29f645b
+      internalID: 1689017562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_153
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 468
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a2a85e08545064a834198c270037c7
+      internalID: 1113047041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_154
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 464
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a1badb9e95c084da5ad42bf5ecd53f
+      internalID: 28117477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_155
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 476
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0812e335e944480468b0caf937def949
+      internalID: -535779469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_156
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 468
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f298cd5e8ff725142b457bc1e5c6d1dc
+      internalID: -654641065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_157
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 476
+        width: 44
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfab5c4f0399c7e4086c6960752dbd94
+      internalID: -1257320656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_168
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 282
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b03a5a819a0173469aef1c33ff9571e
+      internalID: 224359560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_172
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 282
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5b7b615455ae64bb4d9a4f87e36323
+      internalID: -1959536486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_2
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 2667
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dff7ea21b3ebff4cae358d74e724187
+      internalID: 917611306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_3
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 2667
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fcda2ebee9d434194ea19dbf53bab9
+      internalID: 670358498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2402
+        width: 178
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402ce476814d1e848b9a1d4781f1407e
+      internalID: -64005997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_7
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2608
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe219fde4b4053479314dd0570d4fc8
+      internalID: 1824316275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_16
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 2164
+        width: 179
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e2f6e2e6004c64384990caffd93f44
+      internalID: 521755964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_17
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 2354
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e9ad4287e2aac43ae4d1846ead083d
+      internalID: 322758146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_18
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 2154
+        width: 179
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abf457c5bf8ef44ba9555ede179d45f
+      internalID: -1042557993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2164
+        width: 150
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427ab50f32ba3f3408a61a56b4950afe
+      internalID: 1061861443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_20
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2161
+        width: 179
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b6c95e29738fd4f92e59386b4721be
+      internalID: -1937772557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2015
+        width: 122
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ef2fd46f9599240b2a8db7d629e97e
+      internalID: -718496612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_26
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 2029
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42e984bd8d10be4ab64f5aa60fe3992
+      internalID: 1717581865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_27
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 2033
+        width: 81
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8486ba0c90758489557283d758f1b2
+      internalID: -1341887980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_29
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 2037
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180b626560ad4f04d856efc4ba8fec07
+      internalID: -1657649015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_30
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 2034
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87bfa0b58c533848933a722e6649453
+      internalID: -226480195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_31
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 2034
+        width: 82
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd079ee404cf0d4dab3aae4550bcb78
+      internalID: -2130673200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_33
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 2028
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9c07dc6098ad3418c9f04b1b4fb343
+      internalID: -1921339137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_34
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1894
+        width: 122
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f5ffed763233d48a982c4f49d09bf4
+      internalID: 63367980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_35
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1889
+        width: 122
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50ad70911a15d540b172d784dbcb4ef
+      internalID: -1864980492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_37
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1906
+        width: 115
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5742dfc903d08bb43bbee2fcca7763a7
+      internalID: 1600115284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_38
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1872
+        width: 119
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f146f931987e568429a1fb3041dd093b
+      internalID: 1146171666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_46
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1763
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafed60605c6d484ca835e6fe82e72dc
+      internalID: 1595430250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_48
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1764
+        width: 122
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38db818678ffac43b295e6e56c07809
+      internalID: 103984858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_50
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1635
+        width: 122
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b08ff168928b24c87c5a5c28630a45
+      internalID: 1562697143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_62
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1494
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e730e199f847d43a033924c0cd79ef
+      internalID: 1906597459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_84
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1145
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c83b7095b7b66146b091acdbce6745e
+      internalID: 425938328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_116
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 792
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87832b215df5c22409b043c295dbcf26
+      internalID: 414286592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_125
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 785
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302614e55667db64d99777c835dd1332
+      internalID: 1391577693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_128
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 784
+        width: 53
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965989965ddc48445a2aab43b255c627
+      internalID: 46502947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_129
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 769
+        width: 67
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee95d0682286f844a701646f2b0f61b
+      internalID: 1468539193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_134
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 699
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c820d836eae445443961b00ca6c518fa
+      internalID: -1462998606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_135
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 704
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefeb595433e40d41ae2eddec960e11f
+      internalID: 227806211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeakCharacter_159
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 327
+        width: 44
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa44da8e78c4d3488d9535bdf5616cd
+      internalID: 834638299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WeakCharacter_163: 1155685613
+      WeakCharacter_72: 592909274
+      WeakCharacter_88: 1133682783
+      WeakCharacter_101: -1317412700
+      WeakCharacter_175: -224993237
+      WeakCharacter_145: -1887528249
+      WeakCharacter_18: -1042557993
+      WeakCharacter_27: -1341887980
+      WeakCharacter_170: 62362983
+      WeakCharacter_160: -179337306
+      WeakCharacter_22: -718496612
+      WeakCharacter_150: 1309985633
+      WeakCharacter_29: -1657649015
+      WeakCharacter_2: 917611306
+      WeakCharacter_141: -1732902906
+      WeakCharacter_151: -1882943467
+      WeakCharacter_158: -776836550
+      WeakCharacter_153: 1113047041
+      WeakCharacter_166: 265063478
+      WeakCharacter_51: 1496763119
+      WeakCharacter_19: 1061861443
+      WeakCharacter_116: 414286592
+      WeakCharacter_162: 1568345270
+      WeakCharacter_164: -940360136
+      WeakCharacter_140: -303584668
+      WeakCharacter_82: -1360045124
+      WeakCharacter_80: 1470347877
+      WeakCharacter_152: 1689017562
+      WeakCharacter_177: -2071189754
+      WeakCharacter_81: -1057699137
+      WeakCharacter_113: -529739834
+      WeakCharacter_94: -1117811626
+      WeakCharacter_108: -1758716810
+      WeakCharacter_118: -1114496981
+      WeakCharacter_31: -2130673200
+      WeakCharacter_119: 1506566614
+      WeakCharacter_127: -896281508
+      WeakCharacter_36: -1245953969
+      WeakCharacter_126: 1312746917
+      WeakCharacter_58: -1102730956
+      WeakCharacter_124: 1344520691
+      WeakCharacter_49: 1819851166
+      WeakCharacter_37: 1600115284
+      WeakCharacter_63: -978227275
+      WeakCharacter_73: 1934422588
+      WeakCharacter_6: -64005997
+      WeakCharacter_20: -1937772557
+      WeakCharacter_69: -647736060
+      WeakCharacter_122: 855845647
+      WeakCharacter_156: -654641065
+      WeakCharacter_67: 1792810350
+      WeakCharacter_7: 1824316275
+      WeakCharacter_87: -1920380239
+      WeakCharacter_138: 2140936898
+      WeakCharacter_65: 910472244
+      WeakCharacter_178: -893574934
+      WeakCharacter_83: -1951968478
+      WeakCharacter_167: 202361593
+      WeakCharacter_148: 1488110594
+      WeakCharacter_43: 1112390183
+      WeakCharacter_66: -183712761
+      WeakCharacter_173: 1604186723
+      WeakCharacter_9: 1468216621
+      WeakCharacter_30: -226480195
+      WeakCharacter_115: -2030770749
+      WeakCharacter_110: 681027679
+      WeakCharacter_25: 1929912964
+      WeakCharacter_62: 1906597459
+      WeakCharacter_47: -1168919
+      WeakCharacter_172: -1959536486
+      WeakCharacter_59: 1132220758
+      WeakCharacter_5: 155086868
+      WeakCharacter_176: -577764166
+      WeakCharacter_155: -535779469
+      WeakCharacter_70: -694141085
+      WeakCharacter_134: -1462998606
+      WeakCharacter_12: -905834783
+      WeakCharacter_17: 322758146
+      WeakCharacter_107: -1949434858
+      WeakCharacter_24: 554298947
+      WeakCharacter_111: 1153259223
+      WeakCharacter_139: -914176802
+      WeakCharacter_34: 63367980
+      WeakCharacter_55: -1215904658
+      WeakCharacter_77: 1227767135
+      WeakCharacter_42: -614790254
+      WeakCharacter_11: -1929198273
+      WeakCharacter_130: 1038637897
+      WeakCharacter_168: 224359560
+      WeakCharacter_137: -1328374022
+      WeakCharacter_4: -1280840562
+      WeakCharacter_104: 2136878961
+      WeakCharacter_44: -581117101
+      WeakCharacter_132: -331621668
+      WeakCharacter_8: 809353831
+      WeakCharacter_169: 114350948
+      WeakCharacter_0: 1440793832
+      WeakCharacter_1: -1742427198
+      WeakCharacter_78: 1395574899
+      WeakCharacter_40: -362108082
+      WeakCharacter_131: 845442979
+      WeakCharacter_174: -1901183832
+      WeakCharacter_64: 1817798627
+      WeakCharacter_50: 1562697143
+      WeakCharacter_35: -1864980492
+      WeakCharacter_105: 1344602157
+      WeakCharacter_112: 1214650803
+      WeakCharacter_45: 1618365881
+      WeakCharacter_125: 1391577693
+      WeakCharacter_33: -1921339137
+      WeakCharacter_71: 1815928247
+      WeakCharacter_144: 1488273017
+      WeakCharacter_128: 46502947
+      WeakCharacter_79: -1533352588
+      WeakCharacter_100: 7582644
+      WeakCharacter_28: 538767287
+      WeakCharacter_106: 1413063571
+      WeakCharacter_114: -819429812
+      WeakCharacter_171: 1784783600
+      WeakCharacter_54: 177286769
+      WeakCharacter_136: 1993384521
+      WeakCharacter_135: 227806211
+      WeakCharacter_123: 1267986412
+      WeakCharacter_143: 1016467419
+      WeakCharacter_32: 1622602431
+      WeakCharacter_84: 425938328
+      WeakCharacter_117: -862983540
+      WeakCharacter_165: 1237805341
+      WeakCharacter_61: 774877309
+      WeakCharacter_86: -1857060590
+      WeakCharacter_89: 46209579
+      WeakCharacter_157: -1257320656
+      WeakCharacter_10: 957357409
+      WeakCharacter_41: -1987050590
+      WeakCharacter_121: -999011908
+      WeakCharacter_146: -460573015
+      WeakCharacter_120: -1866605071
+      WeakCharacter_142: -1148214617
+      WeakCharacter_85: 1145845825
+      WeakCharacter_57: -63784220
+      WeakCharacter_95: 1357909842
+      WeakCharacter_97: 1879886957
+      WeakCharacter_90: 945010888
+      WeakCharacter_21: 106066764
+      WeakCharacter_93: 1414034976
+      WeakCharacter_53: 882219694
+      WeakCharacter_26: 1717581865
+      WeakCharacter_96: -1311979966
+      WeakCharacter_91: 514779574
+      WeakCharacter_60: 697050015
+      WeakCharacter_46: 1595430250
+      WeakCharacter_68: 1351955472
+      WeakCharacter_109: 1373941331
+      WeakCharacter_75: 1908569328
+      WeakCharacter_76: -100771742
+      WeakCharacter_3: 670358498
+      WeakCharacter_39: -429932674
+      WeakCharacter_15: -1733976718
+      WeakCharacter_52: 1598422066
+      WeakCharacter_99: 1461749207
+      WeakCharacter_129: 1468539193
+      WeakCharacter_92: -581270399
+      WeakCharacter_161: -1772750246
+      WeakCharacter_48: 103984858
+      WeakCharacter_16: 521755964
+      WeakCharacter_14: -764837128
+      WeakCharacter_147: 1466466865
+      WeakCharacter_102: 41563204
+      WeakCharacter_98: -566273446
+      WeakCharacter_13: -525630194
+      WeakCharacter_38: 1146171666
+      WeakCharacter_133: -1874656316
+      WeakCharacter_74: -668372778
+      WeakCharacter_56: 1230922837
+      WeakCharacter_103: 1539471485
+      WeakCharacter_149: 1637667702
+      WeakCharacter_159: 834638299
+      WeakCharacter_154: 28117477
+      WeakCharacter_23: 1724967222
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

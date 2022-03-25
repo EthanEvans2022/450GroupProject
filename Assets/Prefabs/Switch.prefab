@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4021923284020221296}
   - component: {fileID: 4021923284020221309}
   - component: {fileID: 2497537717787310742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   - Player
   offSprite: {fileID: -1840555594, guid: 6bd1caed49cfc534299ec5ad72e4b182, type: 3}
   onSprite: {fileID: -1941070777, guid: 6bd1caed49cfc534299ec5ad72e4b182, type: 3}
-  switchDelay: 3
+  switchDelay: 0
   switchMode: 2
 --- !u!61 &4021923284020221309
 BoxCollider2D:
