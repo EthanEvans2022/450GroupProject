@@ -130,24 +130,52 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3841822625097903725, guid: 21e55761495344af2be879937d26b0d8, type: 3}
-      propertyPath: m_Name
-      value: Keyboard Character
+    - target: {fileID: 1128940455212274968, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 3942723517980219719, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+    - target: {fileID: 1128940455212274968, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128940455212274968, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128940455212274968, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841822625097903722, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841822625097903725, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4212770065109109632, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+    - target: {fileID: 3841822625097903727, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1801843491, guid: 3d6f4c54c8db5b34aa6ceefae5ee0345, type: 3}
+    - target: {fileID: 3942723517980219715, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -176659248, guid: 3d6f4c54c8db5b34aa6ceefae5ee0345, type: 3}
+    - target: {fileID: 3942723517980219716, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_Size.x
-      value: 0.56
+      value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 4212770065109109632, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+    - target: {fileID: 3942723517980219716, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_Size.y
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4212770065109109632, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+    - target: {fileID: 3942723517980219716, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942723517980219719, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450248, guid: 21e55761495344af2be879937d26b0d8, type: 3}
@@ -198,9 +226,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
-    - target: {fileID: 5136628099387863998, guid: 21e55761495344af2be879937d26b0d8, type: 3}
-      propertyPath: m_Name
-      value: Mouse Character
+    - target: {fileID: 5034451381536579433, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5136628099387863998, guid: 21e55761495344af2be879937d26b0d8, type: 3}
       propertyPath: m_IsActive
@@ -208,6 +236,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+--- !u!1 &154669099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3841822625097903725, guid: 21e55761495344af2be879937d26b0d8, type: 3}
+  m_PrefabInstance: {fileID: 154669098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &154669100
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154669099}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ea99a9083cf33a48ae957605f094a4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2042110073
 GameObject:
   m_ObjectHideFlags: 0

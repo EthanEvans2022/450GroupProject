@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class CombinedController : MovementHandler
 {
-
+    private static readonly int MovementX = Animator.StringToHash("MovementX");
+    private static readonly int MovementY = Animator.StringToHash("MovementY");
+    private Animator _animator;
     public GameObject projectilePrefab;
 
     //Configurations
@@ -10,7 +12,7 @@ public class CombinedController : MovementHandler
 
     //States
     public bool isCombined = true;
-    
+
     protected Rigidbody2D Rb;
 
     //Outlets
@@ -19,18 +21,29 @@ public class CombinedController : MovementHandler
     protected void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
-       
+        _animator = GetComponent<Animator>();
     }
 
     protected void Update()
     {
         if (isCombined) CombinedControls();
+        UpdateAnimation();
+    }
+
+    private void UpdateAnimation()
+    {
+        
+        //Rotate player in direction
+        var animationDirection = (GetMouseLocation() - transform.position).normalized * Rb.velocity.magnitude;
+        _animator.SetFloat(MovementX, animationDirection.x);
+        _animator.SetFloat(MovementY, animationDirection.y);
+        _animator.speed = Rb.velocity.magnitude; //Moving faster should make the animation move faster
     }
 
     //Controls for when players are combined
     protected void CombinedControls()
     {
-        //WASD Movement controlls reused
+        //WASD Movement controls reused
         var keyboardDirection = Vector2.zero;
         if (Input.GetKey(KeyCode.A))
             keyboardDirection += new Vector2(-1, 0);
@@ -46,15 +59,13 @@ public class CombinedController : MovementHandler
         var mousePosition = GetMouseLocation();
         var currPos = transform.position;
         var mouseDirection = mousePosition - currPos;
-        //TODO: Change sprite on rotation to match direction of mouse pointing
-        transform.up = mouseDirection;
 
         //Fire Projectile
         if (Input.GetMouseButtonDown(0))
         {
             var projectile = Instantiate(projectilePrefab);
             projectile.transform.position = transform.position;
-            projectile.transform.rotation = transform.rotation;
+            projectile.transform.up = mouseDirection;
         }
     }
 
