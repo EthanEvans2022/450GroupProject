@@ -40,6 +40,7 @@ public class KeyboardController : MonoBehaviour
         _animator.SetFloat(MovementX, animationDirection.x);
         _animator.SetFloat(MovementY, animationDirection.y);
         _animator.speed = Rb.velocity.magnitude; //Moving faster should make the animation move faster
+        print(animationDirection.magnitude);
     }
 
     public void StandardControls(){
