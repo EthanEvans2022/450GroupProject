@@ -53,10 +53,6 @@ using UnityEngine;
 
         }	
         
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-	        print("In DialogueController OnCollisionEnter2D\n");
-        }
         
         
     }
