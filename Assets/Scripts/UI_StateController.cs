@@ -97,7 +97,7 @@ public class UI_StateController : MonoBehaviour
             )
         );
         //Debug.Log(distance);
-        if (distance > 5)
+        if (distance > 6)
         {
             UpdateNotificationDisplay("LOSING SOUL !!!");
             keyboardHealthText.color = new Color32(255, 19, 19, 255);
