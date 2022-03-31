@@ -7,13 +7,22 @@ public class CameraController : MonoBehaviour
     //State
     bool isCombined = false;
     //Outlets
-    public Camera combinedCamera;
-    public Camera keyboardCamera;
-    public Camera mouseCamera;
+    Camera combinedCamera;
+    Camera keyboardCamera;
+    Camera mouseCamera;
     CharacterController characterController;
     void Start()
     {
         characterController = GetComponent<CharacterController>(); 
+        combinedCamera = GameObject.Find("Combined Camera").GetComponent<Camera>();
+        keyboardCamera = GameObject.Find("Keyboard Camera").GetComponent<Camera>();
+        mouseCamera = GameObject.Find("Mouse Camera").GetComponent<Camera>();
+
+        if(combinedCamera == null || keyboardCamera == null || mouseCamera == null){
+            Debug.LogError("MISSING A CAMERA");
+        }
+
+
     }
 
     void Update()
