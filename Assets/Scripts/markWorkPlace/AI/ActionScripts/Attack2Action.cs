@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "PluggableAI/Actions/Attack")]
-public class AttackAction : Action 
+[CreateAssetMenu (menuName = "PluggableAI/Actions/Attack2")]
+public class Attack2Action : Action 
 {
     public override void Act (StateController controller)
     {
@@ -12,23 +12,11 @@ public class AttackAction : Action
         
         Attack (controller);
     }
-    
- 
 
     private void Attack(StateController controller)
     {
        // do Attack!
-      
-           
-           controller.keyboardPlayerHC.DealDamage(
-               controller.attackPower,
-               HealthController.DamageType.None,
-               3,
-               localAfterDamageEvent: (arg0, type, i, arg3) => { }
-           );
-           // execute block of code here
        
 
     }
-    
 }

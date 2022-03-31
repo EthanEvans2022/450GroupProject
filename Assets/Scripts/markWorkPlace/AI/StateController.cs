@@ -9,9 +9,24 @@ public class StateController : MonoBehaviour {
     private bool _aiActive;
     public State currentState;
 
+    
+    public CombinedController combined;
+    public KeyboardController keyboard;
+    public MouseController mouse;
+    
+    //Outlets
     public GameObject keyboardPlayer;
     public GameObject mousePlayer;
-    // public GameController enemyStats;
+    public GameObject combinedPlayer;
+
+    public HealthController keyboardPlayerHC;
+    public HealthController mousePlayerHC;
+    public HealthController combinedPlayerHC;
+    public HealthController selfHC;
+
+
+    
+    
     public Sprite normalSprite;
     public Sprite attackingSprite;
     public Transform eyes;
@@ -21,9 +36,10 @@ public class StateController : MonoBehaviour {
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public int nextWayPoint;
 
-    public float health;
+    
     public float attack_range;
     public float sight_range;
+    public int attackPower;
 
 
     void Awake() {
@@ -32,6 +48,14 @@ public class StateController : MonoBehaviour {
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
         sprite_renderer = GetComponent<SpriteRenderer>();
+        selfHC = GetComponent<HealthController>();
+        combinedPlayer = combined.gameObject;
+        keyboardPlayer = keyboard.gameObject;
+        mousePlayer = mouse.gameObject;
+        keyboardPlayerHC = keyboardPlayer.GetComponent<HealthController>();
+        mousePlayerHC = mousePlayer.GetComponent<HealthController>();
+        combinedPlayerHC = combinedPlayer.GetComponent<HealthController>();
+
     }
     
     void Update() {
@@ -46,6 +70,11 @@ public class StateController : MonoBehaviour {
             currentState = nextState;
             
         }
+    }
+    
+    public void getDistance(State nextState) {
+        
+       
     }
 
     private void OnExitState() {
