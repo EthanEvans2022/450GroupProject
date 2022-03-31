@@ -20,9 +20,9 @@ TagManager:
   - Player
   - Interactives
   - PlayerProjectiles
-  - 
-  - 
-  - 
+  - KeyboardCamera
+  - MouseCamera
+  - CombinedCamera
   - 
   - 
   - 

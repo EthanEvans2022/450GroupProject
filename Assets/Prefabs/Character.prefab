@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4218319191967450248}
   - component: {fileID: 8700831007137023706}
   - component: {fileID: 2738111698844725885}
+
   m_Layer: 8
   m_Name: Character
   m_TagString: CombinedPlayer
