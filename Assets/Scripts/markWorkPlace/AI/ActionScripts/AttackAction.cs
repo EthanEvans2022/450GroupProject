@@ -12,21 +12,22 @@ public class AttackAction : Action
         
         Attack (controller);
     }
-    private float time = 0.0f;
-    public float interpolationPeriod = 0.1f;
+    
  
 
     private void Attack(StateController controller)
     {
        // do Attack!
-       time += Time.deltaTime;
- 
-       if (time >= interpolationPeriod) {
-           time = 0.0f;
-           controller.keyboardPlayerHC.DealDamage(-controller.attackPower);
-
+      
+           
+           controller.keyboardPlayerHC.DealDamage(
+               controller.attackPower,
+               HealthController.DamageType.None,
+               3,
+               localAfterDamageEvent: (arg0, type, i, arg3) => { }
+           );
            // execute block of code here
-       }
+       
 
     }
     

@@ -71,6 +71,11 @@ public class StateController : MonoBehaviour {
             
         }
     }
+    
+    public void getDistance(State nextState) {
+        
+       
+    }
 
     private void OnExitState() {
         
