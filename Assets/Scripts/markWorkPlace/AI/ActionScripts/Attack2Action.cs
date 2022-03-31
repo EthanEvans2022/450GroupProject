@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "PluggableAI/Actions/Attack")]
-public class AttackAction : Action 
+[CreateAssetMenu (menuName = "PluggableAI/Actions/Attack2")]
+public class Attack2Action : Action 
 {
     public override void Act (StateController controller)
     {
@@ -12,22 +12,11 @@ public class AttackAction : Action
         
         Attack (controller);
     }
-    private float time = 0.0f;
-    public float interpolationPeriod = 0.1f;
- 
 
     private void Attack(StateController controller)
     {
        // do Attack!
-       time += Time.deltaTime;
- 
-       if (time >= interpolationPeriod) {
-           time = 0.0f;
-           controller.keyboardPlayerHC.DealDamage(-controller.attackPower);
-
-           // execute block of code here
-       }
+       
 
     }
-    
 }

@@ -32,7 +32,7 @@ public class MouseController : MonoBehaviour
         
        tf = GetComponent<Transform>(); 
        rb = GetComponent<Rigidbody2D>();
-       movementType = MovementType.Follow;
+       movementType = MovementType.Teleport;
        _animators = GetComponentsInChildren<Animator>();
        
     }
