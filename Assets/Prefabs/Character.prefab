@@ -189,6 +189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard Character
       objectReference: {fileID: 0}
+    - target: {fileID: 8384475305063621456, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8384475305063621461, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: m_RootOrder
       value: 2

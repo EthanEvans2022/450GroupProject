@@ -7,6 +7,7 @@ public class CombinedController : MovementHandler
     private Animator _animator;
     public GameObject projectilePrefab;
 
+    public Camera combinedCamera;
     //Configurations
     public float speed = 10;
 
@@ -22,6 +23,8 @@ public class CombinedController : MovementHandler
     {
         Rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        combinedCamera = GameObject.Find("Combined Camera").GetComponent<Camera>();
+
     }
 
     protected void Update()
@@ -72,7 +75,7 @@ public class CombinedController : MovementHandler
 
     private Vector3 GetMouseLocation()
     {
-        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePos = combinedCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         return mousePos;
     }
