@@ -814,8 +814,6 @@ GameObject:
   - component: {fileID: 2655380669194512714}
   - component: {fileID: 2655380669194512715}
   - component: {fileID: 6478413362814308712}
-  - component: {fileID: 8640290919800876504}
-  - component: {fileID: 1763892753462477659}
   - component: {fileID: 7050689571412055695}
   m_Layer: 8
   m_Name: mouse
@@ -908,7 +906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 0}
   speed: 5
-  mouseBuffer: 0.1
+  mouseBuffer: 0.01
 --- !u!50 &2655380669194512715
 Rigidbody2D:
   serializedVersion: 4
@@ -946,42 +944,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.56, y: 0.7}
   m_Direction: 0
---- !u!114 &8640290919800876504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2655380669194512726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d77b731f0333844d92f1815f4f4a9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healInterval: 1
-  acidInterval: 1
-  fireInterval: 1
-  lightningInterval: 1
-  currentHealth: 100
---- !u!114 &1763892753462477659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2655380669194512726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d77b731f0333844d92f1815f4f4a9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healInterval: 1
-  acidInterval: 1
-  fireInterval: 1
-  lightningInterval: 1
-  currentHealth: 100
 --- !u!195 &7050689571412055695
 NavMeshAgent:
   m_ObjectHideFlags: 0

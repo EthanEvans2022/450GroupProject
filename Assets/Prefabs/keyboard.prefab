@@ -604,7 +604,6 @@ GameObject:
   - component: {fileID: 8384475305063621460}
   - component: {fileID: 8384475305063621463}
   - component: {fileID: -3557408489269618651}
-  - component: {fileID: 9060826145212480110}
   - component: {fileID: 1344369076}
   m_Layer: 8
   m_Name: keyboard
@@ -612,7 +611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8384475305063621461
 Transform:
   m_ObjectHideFlags: 0
@@ -714,8 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1c0c84121aa4a66906c8a8e64bf053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 50327302617615270, guid: 97dd76b36020b46a8a5f735ea40dbfb2,
-    type: 3}
+  projectilePrefab: {fileID: 50327302617615270, guid: 97dd76b36020b46a8a5f735ea40dbfb2, type: 3}
   speed: 3
 --- !u!70 &-3557408489269618651
 CapsuleCollider2D:
@@ -730,27 +728,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.8, y: 1}
+  m_Offset: {x: 0, y: -0.1}
+  m_Size: {x: 0.8, y: 0.8}
   m_Direction: 0
---- !u!114 &9060826145212480110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8384475305063621456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d77b731f0333844d92f1815f4f4a9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healInterval: 1
-  acidInterval: 1
-  fireInterval: 1
-  lightningInterval: 1
-  currentHealth: 100
 --- !u!95 &1344369076
 Animator:
   serializedVersion: 4
@@ -761,7 +741,7 @@ Animator:
   m_GameObject: {fileID: 8384475305063621456}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ea99a9083cf33a48ae957605f094a4c, type: 2}
+  m_Controller: {fileID: 9100000, guid: c927cc77ecb44244488885e90347fb1b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

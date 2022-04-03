@@ -160,10 +160,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Combined Character
       objectReference: {fileID: 0}
-    - target: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
 --- !u!4 &3942723517980219712 stripped
