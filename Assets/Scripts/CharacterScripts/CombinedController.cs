@@ -37,7 +37,7 @@ public class CombinedController : MovementHandler
     {
         
         //Rotate player in direction
-        var animationDirection = (GetMouseLocation() - transform.position).normalized * Rb.velocity.magnitude;
+        var animationDirection = (GetMouseLocation() - transform.position).normalized * (Rb.velocity.magnitude == 0.0 ? 0.00001f :Rb.velocity.magnitude);
         _animator.SetFloat(MovementX, animationDirection.x);
         _animator.SetFloat(MovementY, animationDirection.y);
         _animator.speed = Rb.velocity.magnitude; //Moving faster should make the animation move faster
