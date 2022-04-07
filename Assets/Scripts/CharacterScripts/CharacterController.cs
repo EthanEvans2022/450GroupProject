@@ -38,7 +38,7 @@ public class CharacterController : MonoBehaviour
 
     private void HandleMenuControls(){
         if (Input.GetKeyDown(KeyCode.Return)){
-            DialogueController.dialogueControllerInstance.NextText();
+            MenuController.instance.DisplayDialogue();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)){

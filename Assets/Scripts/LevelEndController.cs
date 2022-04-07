@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelEndController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class LevelEndController : MonoBehaviour
         if (other.gameObject.layer == 8)
         {
             //MenuController.instance.ShowNextMenu();
+			MenuController.instance.ShowNextLevelMenu();
         }
     }
 }
