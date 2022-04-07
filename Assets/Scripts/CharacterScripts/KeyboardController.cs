@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class KeyboardController : MonoBehaviour
 {
-    //Outputs
+    //Outlets
     protected Transform Tf;
     protected Rigidbody2D Rb;
-
+    private Animator _animator;
     public GameObject projectilePrefab; 
     //Configurations 
     public float speed;
-    public float speedPenalty = 1;
+    private static readonly int MovementX = Animator.StringToHash("MovementX");
+    private static readonly int MovementY = Animator.StringToHash("MovementY");
     
     //States
 	
@@ -21,12 +22,25 @@ public class KeyboardController : MonoBehaviour
     void Start(){
        Tf = GetComponent<Transform>(); 
        Rb = GetComponent<Rigidbody2D>();
+       _animator = GetComponent<Animator>();
        //CombineCharacters();
     }
 
     void Update()
     {
         StandardControls();
+        UpdateAnimation();
+    }
+
+    private void UpdateAnimation()
+    {
+
+        //Rotate player in direction
+        var animationDirection = Rb.velocity;
+        _animator.SetFloat(MovementX, animationDirection.x);
+        _animator.SetFloat(MovementY, animationDirection.y);
+        _animator.speed = Rb.velocity.magnitude; //Moving faster should make the animation move faster
+        print(animationDirection.magnitude);
     }
 
     public void StandardControls(){

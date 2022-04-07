@@ -13,7 +13,7 @@ public class MouseController : MonoBehaviour
 
     //Configurations
     public float speed;
-    public float mouseBuffer = 0.25f;
+    public float mouseBuffer = 0.01f;
     Camera mouseCamera;
 
     //States
@@ -85,7 +85,7 @@ public class MouseController : MonoBehaviour
         Vector3 mousePos = GetMouseLocation();
         Vector3 currPos = mouseCamera.WorldToViewportPoint(tf.position);
         Vector3 diff = mousePos - currPos;
-        Vector2 direction = diff.magnitude < mouseBuffer ? new Vector2(0,0) : new Vector2(diff.x, diff.y);
+        Vector2 direction = (diff.x * diff.x + diff.y * diff.y) < mouseBuffer*mouseBuffer ? new Vector2(0,0) : new Vector2(diff.x, diff.y);
         //Vector3 diff =currPos - mousePos;     Happy little accident: character repulsed from mouse, can be fun chase AI later 
         rb.velocity = direction.normalized * speed;
         foreach (var animator in _animators)

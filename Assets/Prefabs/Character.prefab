@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8700831007137023706}
   - component: {fileID: 2738111698844725885}
   - component: {fileID: 8018915835081116998}
+  - component: {fileID: 5054367098771303450}
   m_Layer: 8
   m_Name: Character
   m_TagString: CombinedPlayer
@@ -32,8 +33,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3942723517980219712}
-  - {fileID: 3841822625097903720}
   - {fileID: 5136628099387863969}
+  - {fileID: 3841822625097903720}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86,6 +87,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa578d794a014b5fb11549f067a9d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5054367098771303450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218319191967450255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d77b731f0333844d92f1815f4f4a9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healInterval: 1
+  acidInterval: 1
+  fireInterval: 1
+  lightningInterval: 1
+  currentHealth: 100
 --- !u!1001 &881901590332890568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,16 +157,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
       propertyPath: m_Name
       value: Combined Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
@@ -156,37 +167,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4218319191967450248, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
   m_PrefabInstance: {fileID: 881901590332890568}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3942723517980219719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4218319191967450255, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
-  m_PrefabInstance: {fileID: 881901590332890568}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &6744683434283635176
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3942723517980219719}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8083e39600d238d41800d67cbe178c36, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5034451381536579433 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5323485697558086305, guid: 994e485904337bc4da7736aa247bca7c, type: 3}
   m_PrefabInstance: {fileID: 881901590332890568}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3942723517980219719}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4866d3d535453486f86a7bb95e798a65, type: 3}
@@ -201,7 +187,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8384475305063621456, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: m_Name
-      value: keyboard
+      value: Keyboard Character
       objectReference: {fileID: 0}
     - target: {fileID: 8384475305063621456, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: m_IsActive
@@ -209,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384475305063621461, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8384475305063621461, guid: e356720f38cf34666a4fc84bb2bd54e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -278,7 +264,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2655380669194512713, guid: ee7d41058bd4c40539d54ba9e82462d0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2655380669194512713, guid: ee7d41058bd4c40539d54ba9e82462d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -322,11 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655380669194512726, guid: ee7d41058bd4c40539d54ba9e82462d0, type: 3}
       propertyPath: m_Name
-      value: mouse
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655380669194512726, guid: ee7d41058bd4c40539d54ba9e82462d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: Mouse Character
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee7d41058bd4c40539d54ba9e82462d0, type: 3}
