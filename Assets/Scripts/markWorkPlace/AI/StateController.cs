@@ -10,6 +10,7 @@ public class StateController : MonoBehaviour {
     private bool _aiActive;
     public State currentState;
 
+//Outlets
 
     public CombinedController combined;
     public KeyboardController keyboard;
@@ -20,10 +21,10 @@ public class StateController : MonoBehaviour {
     [HideInInspector] public GameObject mousePlayer;
     [HideInInspector] public GameObject combinedPlayer;
 
-    public HealthController keyboardPlayerHC;
-    public HealthController mousePlayerHC;
-    public HealthController combinedPlayerHC;
-    public HealthController selfHC;
+    [HideInInspector] public HealthController keyboardPlayerHC;
+    [HideInInspector] public HealthController mousePlayerHC;
+    [HideInInspector] public HealthController combinedPlayerHC;
+    [HideInInspector] public HealthController selfHC;
 
 
     public Sprite normalSprite;
@@ -59,9 +60,9 @@ public class StateController : MonoBehaviour {
         combinedPlayer = combined.gameObject;
         keyboardPlayer = keyboard.gameObject;
         mousePlayer = mouse.gameObject;
-        keyboardPlayerHC = keyboardPlayer.GetComponent<HealthController>();
-        mousePlayerHC = mousePlayer.GetComponent<HealthController>();
-        combinedPlayerHC = combinedPlayer.GetComponent<HealthController>();
+        keyboardPlayerHC = keyboardPlayer.GetComponentInParent<HealthController>();
+        mousePlayerHC = mousePlayer.GetComponentInParent<HealthController>();
+        combinedPlayerHC = combinedPlayer.GetComponentInParent<HealthController>();
     }
 
     void Update() {

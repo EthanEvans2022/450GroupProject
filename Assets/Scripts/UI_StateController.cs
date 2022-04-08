@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using Unity.Collections;
 using Unity.Jobs;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -40,9 +41,9 @@ public class UI_StateController : MonoBehaviour
         combinedPlayer = combined.gameObject;
         keyboardPlayer = keyboard.gameObject;
         mousePlayer = mouse.gameObject;
-        keyboardPlayerHC = keyboardPlayer.GetComponent<HealthController>();
-        mousePlayerHC = mousePlayer.GetComponent<HealthController>();
-        combinedPlayerHC = combinedPlayer.GetComponent<HealthController>();
+        keyboardPlayerHC = keyboardPlayer.GetComponentInParent<HealthController>();
+        mousePlayerHC = mousePlayer.GetComponentInParent<HealthController>();
+        combinedPlayerHC = combinedPlayer.GetComponentInParent<HealthController>();
         //Debug.Log("UIController Started");
         UpdateHealthDisplay();
     }
