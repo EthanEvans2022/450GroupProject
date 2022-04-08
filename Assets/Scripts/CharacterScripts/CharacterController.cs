@@ -15,6 +15,7 @@ public class CharacterController : MonoBehaviour
     
     //States
     public bool isCombined = true;
+	//public bool isPause;
 
     //Outlets
 
@@ -32,6 +33,12 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+		/*
+		if (isPause) {
+			return;
+		}
+		*/
+
         if (Input.GetKeyDown(KeyCode.C)) ToggleCharacterCombined();
         HandleMenuControls();
     }
