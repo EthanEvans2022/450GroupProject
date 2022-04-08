@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658e02f06739126438863d9d5a53661b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 50327302617615270, guid: 97dd76b36020b46a8a5f735ea40dbfb2, type: 3}
+  projectile: {fileID: 50327302617615270, guid: 85c65f0de313d4949a3fe0d2044d140c, type: 3}
 --- !u!1 &856446549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1355,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5054612684682300610, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
       propertyPath: m_Name
       value: BrownRobe
@@ -1660,11 +1664,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242075416567348791, guid: fd5654b73614247198aecceb9f2c5e4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47254986
+      value: 0.47292238
       objectReference: {fileID: 0}
     - target: {fileID: 5242075416567348791, guid: fd5654b73614247198aecceb9f2c5e4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7998443
+      value: -1.7999933
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5654b73614247198aecceb9f2c5e4c, type: 3}

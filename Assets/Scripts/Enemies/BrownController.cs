@@ -19,12 +19,13 @@ public class BrownController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _state = GetComponent<StateController>();
         _animator = GetComponent<Animator>();
-        _state.attackEvent += (StateController c) =>
+        _state.attackEvent += (c) =>
         {
             print("DING, Attacking");
             var p = Instantiate(projectile);
-            var a = c.getTarget().transform.position - transform.position;
-            p.transform.position = transform.position + a.normalized * 0.7f;
+            var position = transform.position;
+            var a = c.getTarget().transform.position - position;
+            p.transform.position = position + a.normalized * 0.7f;
             p.transform.up = a;
         };
     }
