@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BrownController : MonoBehaviour
+public class RedRobController : MonoBehaviour
 {
     private Animator _animator;
 

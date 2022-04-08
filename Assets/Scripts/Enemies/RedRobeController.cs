@@ -7,6 +7,7 @@ public class BrownController : MonoBehaviour
     //Outlets
     private Rigidbody2D _rigidbody;
     private StateController _state;
+    private HealthController _health;
 
     
     //Config
@@ -19,9 +20,16 @@ public class BrownController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _state = GetComponent<StateController>();
         _animator = GetComponent<Animator>();
+        _health = GetComponent<HealthController>();
+        _health.AfterDamageEvent += (damage, a, b, c) =>
+        {
+            if (_health.currentHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        };
         _state.attackEvent += (c) =>
         {
-            print("DING, Attacking");
             var p = Instantiate(projectile);
             var position = transform.position;
             var a = c.getTarget().transform.position - position;
