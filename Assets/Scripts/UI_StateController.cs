@@ -8,8 +8,18 @@ using UnityEngine.Serialization;
 public class UI_StateController : MonoBehaviour
 {
     //outlet
-    public HealthController keyboardPlayer;
-    public HealthController mousePlayer;
+    public CombinedController combined;
+    public KeyboardController keyboard;
+    public MouseController mouse;
+
+
+    [HideInInspector] public GameObject keyboardPlayer;
+    [HideInInspector] public GameObject mousePlayer;
+    [HideInInspector] public GameObject combinedPlayer;
+
+    [HideInInspector] public HealthController keyboardPlayerHC;
+    [HideInInspector] public HealthController mousePlayerHC;
+    [HideInInspector] public HealthController combinedPlayerHC;
 
     public TMP_Text keyboardHealthText;
     public TMP_Text mouseHealthText;
@@ -23,23 +33,32 @@ public class UI_StateController : MonoBehaviour
     public bool depletingFlag;
 
 
+
+
     private void Start()
-    {
-        Debug.Log("UIController Started");
+    { 
+        combinedPlayer = combined.gameObject;
+        keyboardPlayer = keyboard.gameObject;
+        mousePlayer = mouse.gameObject;
+        keyboardPlayerHC = keyboardPlayer.GetComponent<HealthController>();
+        mousePlayerHC = mousePlayer.GetComponent<HealthController>();
+        combinedPlayerHC = combinedPlayer.GetComponent<HealthController>();
+        //Debug.Log("UIController Started");
         UpdateHealthDisplay();
     }
 
     private void Update()
     {
+        
+        
         var lineRenderer = GetComponent<LineRenderer>();
-        if (mousePlayer.gameObject.activeSelf)
-        {
+        if (mousePlayer.activeSelf) {
+            
             lineRenderer.positionCount = 2;
             lineRenderer.SetPosition(0, mousePlayer.gameObject.transform.position);
             lineRenderer.SetPosition(1, keyboardPlayer.gameObject.transform.position);
         }
-        else
-        {
+        else {
             lineRenderer.positionCount = 0;
         }
 
@@ -61,8 +80,16 @@ public class UI_StateController : MonoBehaviour
 
     private void UpdateHealthDisplay()
     {
-        keyboardHealthText.text = "Player's Health: " + keyboardPlayer.currentHealth;
-        mouseHealthText.text = "Soul's Health: " + mousePlayer.currentHealth;
+        if (mousePlayer.activeSelf) {
+            keyboardHealthText.text = "Your's Health: " + keyboard.gameObject.GetComponentInParent<HealthController>().currentHealth;
+            mouseHealthText.text = "Soul's Health: " + mouse.gameObject.GetComponentInParent<HealthController>().currentHealth;
+        }
+        else {
+            keyboardHealthText.text = "Your's Health: " + combined.gameObject.GetComponentInParent<HealthController>().currentHealth;
+            mouseHealthText.text = "";
+        }
+        
+      
     }
 
     private void UpdateNotificationDisplay(string text)
@@ -76,8 +103,8 @@ public class UI_StateController : MonoBehaviour
         {
             if (depletingFlag)
             {
-                HealthUpdate(keyboardPlayer, -1);
-                HealthUpdate(mousePlayer, -1);
+                HealthUpdate(keyboardPlayerHC, -1);
+                HealthUpdate(mousePlayerHC, -1);
             }
 
             nextTime += interval;
@@ -97,7 +124,7 @@ public class UI_StateController : MonoBehaviour
             )
         );
         //Debug.Log(distance);
-        if (distance > 6)
+        if (distance > 6.5)
         {
             UpdateNotificationDisplay("LOSING SOUL !!!");
             keyboardHealthText.color = new Color32(255, 19, 19, 255);

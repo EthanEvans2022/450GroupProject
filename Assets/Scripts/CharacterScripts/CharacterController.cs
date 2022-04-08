@@ -70,7 +70,7 @@ public class CharacterController : MonoBehaviour
         var position = combinedInstance.transform.position;
         SpawnCharacter(keyboard.gameObject, position, Quaternion.identity);
         SpawnCharacter(mouse.gameObject, position, Quaternion.identity);
-        
+       
         //Destroy split characters
         combinedInstance.SetActive(false);
     }
@@ -79,7 +79,7 @@ public class CharacterController : MonoBehaviour
     {
         //Activate all components
         SpawnCharacter(combined.gameObject, keyboardInstance.transform.position, Quaternion.identity);
-        
+       
         //Destroy split characters
         keyboardInstance.SetActive(false);
         mouseInstance.SetActive(false);
