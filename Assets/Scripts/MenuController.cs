@@ -4,129 +4,161 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class MenuController : MonoBehaviour
 {
+
 	//	Outlets
 	public static MenuController instance;
-	public GameObject mainMenu;
-	public GameObject optionsMenu;
-	public GameObject levelMenu;
-	public GameObject nextMenu;
-	private AssetBundle myLoadedAssetBundle;
-	private string[] scenePaths;
+	public Canvas mainMenu;
+	public Canvas directions;
+	public Canvas levelSelectMenu;
+	public Canvas nextLevelMenu;
+	public Canvas dialogueBox;
+	public TMP_Text dialogueText;
 	
 	// States
 	private bool mainMenuOn;
+	private int currentLevel;
+	private int currentDialogue;
+	
+	// Configurations
+	private string[] textParts =
+	{
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"Semper viverra nam libero justo. Arcu odio ut sem nulla pharetra diam sit amet.",
+		"Varius morbi enim nunc faucibus a pellentesque sit amet. Id donec ultrices tincidunt arcu. Imperdiet sed euismod nisi porta lorem mollis."
+	};
 
 
 	// Methods
 	void Awake() 
 	{
-		//print("top of Awake()");
+		print("In the Awake() method of the MenuController\n");
 		instance = this;
 		mainMenuOn = false;
 		Hide();
+		currentLevel = 1;
+		currentDialogue = 0;
 	}
-
-
-
-	public void Show()
-	{
-		//print("top of Show()");
-		this.gameObject.SetActive(true);
-	}
-
+	
 	public void Hide()
 	{
-		//print("top of Hide()");
-		this.gameObject.SetActive(false);
+		print("In the Hide() method of the MenuController\n");
+		mainMenu.enabled = false;
+		mainMenuOn = false;
+		directions.enabled = false;
+		levelSelectMenu.enabled = false;
+		nextLevelMenu.enabled = false;
+		dialogueBox.enabled = false;
+		dialogueText.enabled = false;
 	}
-
-	void SwitchMenu(GameObject someMenu)
-	{
-		//print("top of SwitchMenu()");
-		//Turn off all menus
-		mainMenu.SetActive(false);
-		optionsMenu.SetActive(false);
-		levelMenu.SetActive(false);
-		nextMenu.SetActive(false);
-		Hide();
-
-		// Turn on requested menu
-		Show();
-		someMenu.SetActive(true);
-
-		//if the someMenu is mainMenu then set the state
-		if (someMenu == mainMenu)
-		{
-			mainMenuOn = true;
-		}
-	}
-
-	// Even simpler switch menu functions:
+	
 	public void ShowMainMenu()
 	{
-		//print("top of ShowMainMenu()");
-		//SwitchMenu(mainMenu);
+		print("In the ShowMainMenu() method of the MenuController\n");
 		mainMenuOn = false;
 		ToggleMainMenu();
 	}
 	
+
 	// Toggle the main menu
 	public void ToggleMainMenu()
 	{
-		// print("top of ToggleMainMenu()");
-		
+		print("In the ToggleMainMenu() method of the MenuController\n");
 		// Turn off all menus
-		mainMenu.SetActive(false);
-		optionsMenu.SetActive(false);
-		levelMenu.SetActive(false);
-		nextMenu.SetActive(false);
-		Hide();
+		mainMenu.enabled = false;
+		directions.enabled = false;
+		levelSelectMenu.enabled = false;
+		nextLevelMenu.enabled = false;
 		
 		
 		if (mainMenuOn)
 		{
-			//print("in ToggleMainMenu(), in the if");
-			mainMenu.SetActive(false);
+			mainMenu.enabled = false;
 			mainMenuOn = false;
 			Hide();
 		}
 		else
 		{
-			//print("in ToggleMainMenu(), in the else");
-			mainMenu.SetActive(true);
+			mainMenu.enabled = true;
 			mainMenuOn = true;
-			Show();
 		}
 	}
-
-	public void ShowOptionsMenu()
-	{ 
-		//print("top of ShowOptionsMenu()");
-		SwitchMenu(optionsMenu);
+	
+	// Show menus
+	public void ShowDirectionsMenu()
+	{
+		print("In the ShowDirectionsMenu() method of the MenuController\n");
+		Hide();
+		directions.enabled = true;
 	}
 
-	public void ShowLevelMenu()
+	public void ShowLevelSelectMenu()
 	{
-		//print("top of ShowLevelMenu()");
-		SwitchMenu(levelMenu);
+		print("In the ShowLevelSelectMenu() method of the MenuController\n");
+		Hide();
+		levelSelectMenu.enabled = true;
 	}
 
-	public void ShowNextMenu()
+	public void ShowNextLevelMenu()
 	{
-		//print("top of ShowNextMenu()");
-		SwitchMenu(nextMenu);
+		print("In the ShowNextLevelMenu() method of the MenuController\n");
+		Hide();
+		nextLevelMenu.enabled = true;
+	}
+
+	// Level Select Menu Button Functionality
+	public void LevelOne()
+	{
+		print("In the LevelOne() method of the MenuController\n");
+		Hide();
+		SceneManager.LoadScene("mark_w5");
+	}
+
+	public void LevelTwo()
+	{
+		print("In the LevelTwo() method of the MenuController\n");
+		Hide();
+		SceneManager.LoadScene("LightingTest");
+	}
+
+	// Next Level Menu Button Functionality
+	public void Replay()
+	{
+		print("In the Replay() method of the MenuController\n");
+		SceneManager.LoadScene("mark_w5");
+	}
+
+	public void NextLevel()
+	{
+		print("In the NextLevel() method of the MenuController\n");
+		SceneManager.LoadScene("LightingTest");
+		Hide();
 	}
 	
+	// Dialogue Box Functionality
+	public void DisplayDialogue()
+	{
+		dialogueBox.enabled = true;
+		dialogueText.enabled = true;
+
+		if (currentDialogue < textParts.Length)
+		{
+			dialogueText.text = textParts[currentDialogue];
+			currentDialogue = currentDialogue + 1;
+		}
+		else
+		{
+			dialogueBox.enabled = false;
+			dialogueText.enabled = false;
+			currentDialogue = 0;
+		}
+
+	}
 }
-
-
-
-
-
-
 
 
 
