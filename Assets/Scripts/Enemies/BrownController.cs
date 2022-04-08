@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class RedRobController : MonoBehaviour
+public class BrownController : MonoBehaviour
 {
     private Animator _animator;
 
@@ -21,13 +22,6 @@ public class RedRobController : MonoBehaviour
         _state = GetComponent<StateController>();
         _animator = GetComponent<Animator>();
         _health = GetComponent<HealthController>();
-        _health.AfterDamageEvent += (damage, a, b, c) =>
-        {
-            if (_health.currentHealth <= 0)
-            {
-                Destroy(gameObject);
-            }
-        };
         _state.attackEvent += (c) =>
         {
             var p = Instantiate(projectile);
@@ -44,6 +38,12 @@ public class RedRobController : MonoBehaviour
         _animator.SetFloat(MovementX, mov.x);
         _animator.SetFloat(MovementY, mov.y);
         _animator.speed = mov.magnitude; //Moving faster should make the animation move faster
+
+        print(_health.currentHealth);
+        if (_health.currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
         
     }
 }
