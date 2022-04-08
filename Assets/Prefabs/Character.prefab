@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8700831007137023706}
   - component: {fileID: 2738111698844725885}
   - component: {fileID: 8018915835081116998}
-  - component: {fileID: 5054367098771303450}
   m_Layer: 8
   m_Name: Character
   m_TagString: CombinedPlayer
@@ -87,24 +86,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa578d794a014b5fb11549f067a9d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5054367098771303450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4218319191967450255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d77b731f0333844d92f1815f4f4a9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healInterval: 1
-  acidInterval: 1
-  fireInterval: 1
-  lightningInterval: 1
-  currentHealth: 100
 --- !u!1001 &881901590332890568
 PrefabInstance:
   m_ObjectHideFlags: 0

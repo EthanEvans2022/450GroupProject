@@ -19,6 +19,6 @@ public class DialogueTriggerController : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D other)
     {
-        DialogueController.dialogueControllerInstance.NextText();
+        MenuController.instance.DisplayDialogue();
     }
 }

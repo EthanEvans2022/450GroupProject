@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 548744753592293945}
   - component: {fileID: 8275207805627542300}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MenuCanvasDraft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &548744753592293945
 MonoBehaviour:
   m_ObjectHideFlags: 0

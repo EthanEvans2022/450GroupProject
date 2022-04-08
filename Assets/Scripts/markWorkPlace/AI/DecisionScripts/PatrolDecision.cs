@@ -16,18 +16,12 @@ public class PatrolDecision : Decision
     {
         //controller.navMeshAgent.Stop ();
         //controller.transform.Rotate (0,  5 * Time.deltaTime, 0);
-        double KBdistance = Math.Sqrt(Math.Pow(controller.eyes.position.x - controller.keyboardPlayer.transform.position.x, 2)
-                                    + Math.Pow(controller.eyes.position.y - controller.keyboardPlayer.transform.position.y, 2));
+        double distance = controller.getDistance(controller.getTarget().transform,controller.eyes);
         
-        double MSdistance = Math.Sqrt(Math.Pow(controller.eyes.position.x - controller.mousePlayer.transform.position.x, 2)
-                                      + Math.Pow(controller.eyes.position.y - controller.mousePlayer.transform.position.y, 2));
-       
-        if (KBdistance > 1.5 * controller.sight_range){
-           
+        if (distance > (1.5 * controller.sight_range)){
+            
             return true;
         }
-        
-
         return false;
        
     }

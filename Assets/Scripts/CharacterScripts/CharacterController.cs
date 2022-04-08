@@ -15,6 +15,7 @@ public class CharacterController : MonoBehaviour
     
     //States
     public bool isCombined = true;
+	//public bool isPause;
 
     //Outlets
 
@@ -32,13 +33,19 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+		/*
+		if (isPause) {
+			return;
+		}
+		*/
+
         if (Input.GetKeyDown(KeyCode.C)) ToggleCharacterCombined();
         HandleMenuControls();
     }
 
     private void HandleMenuControls(){
         if (Input.GetKeyDown(KeyCode.Return)){
-            DialogueController.dialogueControllerInstance.NextText();
+            MenuController.instance.DisplayDialogue();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)){
@@ -70,7 +77,7 @@ public class CharacterController : MonoBehaviour
         var position = combinedInstance.transform.position;
         SpawnCharacter(keyboard.gameObject, position, Quaternion.identity);
         SpawnCharacter(mouse.gameObject, position, Quaternion.identity);
-        
+       
         //Destroy split characters
         combinedInstance.SetActive(false);
     }
@@ -79,7 +86,7 @@ public class CharacterController : MonoBehaviour
     {
         //Activate all components
         SpawnCharacter(combined.gameObject, keyboardInstance.transform.position, Quaternion.identity);
-        
+       
         //Destroy split characters
         keyboardInstance.SetActive(false);
         mouseInstance.SetActive(false);
