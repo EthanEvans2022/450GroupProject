@@ -27,7 +27,7 @@ public class BrownController : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
+        };
         _state.attackEvent += (c) =>
         {
             var p = Instantiate(projectile);
