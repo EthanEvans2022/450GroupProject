@@ -8,12 +8,22 @@ public class BrownController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private StateController _state;
 
+    
+    //Config
+    public GameObject projectile;
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _state = GetComponent<StateController>();
         _animator = GetComponent<Animator>();
-        // _state.listen("attack");
+        _state.attackEvent += (StateController c) =>
+        {
+            print("DING, Attacking");
+            var p = Instantiate(projectile);
+            var a = c.getTarget().transform.position - transform.position;
+            p.transform.position = transform.position + a.normalized * 0.7f;
+            p.transform.up = a;
+        };
     }
 
     private void Update()

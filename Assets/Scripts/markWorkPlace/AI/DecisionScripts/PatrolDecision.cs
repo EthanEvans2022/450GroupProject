@@ -22,7 +22,6 @@ public class PatrolDecision : Decision
             
             return true;
         }
-        Debug.Log("falseeee"+distance);
         return false;
        
     }

@@ -36,11 +36,19 @@ public class StateController : MonoBehaviour {
     [HideInInspector] public int nextWayPoint;
 
 
+    public float attack_frequency = 1;
     public float attack_range;
     public float sight_range;
     public int attackPower;
 
+    public delegate void attackHandler(StateController stateController);
+    public event attackHandler attackEvent;
 
+    public void RaiseAttack()
+    {
+        attackEvent?.Invoke(this);
+        print("Event Invoked");
+    }
     void Awake() {
         // tankShooting = GetComponent<Complete.TankShooting> ();
         navMeshAgent = GetComponent<NavMeshAgent>();
