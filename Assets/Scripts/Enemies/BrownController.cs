@@ -11,6 +11,9 @@ public class BrownController : MonoBehaviour
     
     //Config
     public GameObject projectile;
+    private static readonly int MovementX = Animator.StringToHash("MovementX");
+    private static readonly int MovementY = Animator.StringToHash("MovementY");
+
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -29,8 +32,8 @@ public class BrownController : MonoBehaviour
     private void Update()
     {
         var mov = _rigidbody.velocity;
-        _animator.SetFloat("MovementX", mov.x);
-        _animator.SetFloat("MovementY", mov.y);
+        _animator.SetFloat(MovementX, mov.x);
+        _animator.SetFloat(MovementY, mov.y);
         _animator.speed = mov.magnitude; //Moving faster should make the animation move faster
 
     }
