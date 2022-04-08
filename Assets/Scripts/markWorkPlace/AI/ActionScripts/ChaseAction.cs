@@ -15,8 +15,7 @@ public class ChaseAction : Action
 
     private void Chase(StateController controller)
     {
-
-        controller.navMeshAgent.destination = controller.keyboardPlayer.transform.position;
+        controller.navMeshAgent.destination = controller.getTarget().transform.position;
         controller.navMeshAgent.Resume ();
     }
 }

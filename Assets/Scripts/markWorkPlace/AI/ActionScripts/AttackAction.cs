@@ -20,12 +20,12 @@ public class AttackAction : Action
        // do Attack!
       
            
-           controller.keyboardPlayerHC.DealDamage(
-               controller.attackPower,
-               HealthController.DamageType.None,
-               3,
-               localAfterDamageEvent: (arg0, type, i, arg3) => { }
-           );
+           // controller.getTarget().GetComponent<HealthController>().DealDamage(
+           //     controller.attackPower,
+           //     HealthController.DamageType.None,
+           //     3,
+           //     localAfterDamageEvent: (arg0, type, i, arg3) => { }
+           // );
            // execute block of code here
        
 

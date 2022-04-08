@@ -16,16 +16,12 @@ public class ChaseDecision : Decision
     {
         //controller.navMeshAgent.Stop ();
         //controller.transform.Rotate (0,  5 * Time.deltaTime, 0);
-        double KBdistance = Math.Sqrt(Math.Pow(controller.eyes.position.x - controller.keyboardPlayer.transform.position.x, 2)
-                                    + Math.Pow(controller.eyes.position.y - controller.keyboardPlayer.transform.position.y, 2));
-        
-        double MSdistance = Math.Sqrt(Math.Pow(controller.eyes.position.x - controller.mousePlayer.transform.position.x, 2)
-                                      + Math.Pow(controller.eyes.position.y - controller.mousePlayer.transform.position.y, 2));
-        
-        if (KBdistance < controller.sight_range && KBdistance > controller.attack_range) {
+        double distance = controller.getDistance(controller.getTarget().transform,controller.eyes);
+        if (distance < controller.sight_range && distance > controller.attack_range) {
             return true;
+           // Debug.Log("chase: true"+distance);
         }
-        
+        // Debug.Log("chase: false"+distance);
         
 
         return false;
