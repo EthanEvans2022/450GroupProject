@@ -80,11 +80,14 @@ public class MenuController : MonoBehaviour
 			mainMenu.enabled = false;
 			mainMenuOn = false;
 			Hide();
+			//CharacterController.isPause = false;
 		}
 		else
 		{
 			mainMenu.enabled = true;
 			mainMenuOn = true;
+			//CharacterController.isPause = true;
+
 		}
 	}
 	
