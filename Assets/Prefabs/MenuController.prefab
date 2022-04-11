@@ -47,3 +47,6 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   directions: {fileID: 0}
   levelSelectMenu: {fileID: 0}
+  nextLevelMenu: {fileID: 0}
+  dialogueBox: {fileID: 0}
+  dialogueText: {fileID: 0}

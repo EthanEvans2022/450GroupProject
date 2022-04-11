@@ -89,6 +89,8 @@ public class MenuController : MonoBehaviour
 			//CharacterController.isPause = true;
 
 		}
+
+		print("at the bottom of the ToggleMainMenu() method of the MenuController. Value of mainMenuOn: " + mainMenuOn);
 	}
 	
 	// Show menus
@@ -98,21 +100,21 @@ public class MenuController : MonoBehaviour
 		Hide();
 		directions.enabled = true;
 	}
-
+	
 	public void ShowLevelSelectMenu()
 	{
 		print("In the ShowLevelSelectMenu() method of the MenuController\n");
 		Hide();
-		levelSelectMenu.enabled = true;
+		//levelSelectMenu.enabled = true;
 	}
-
+	
 	public void ShowNextLevelMenu()
 	{
 		print("In the ShowNextLevelMenu() method of the MenuController\n");
 		Hide();
 		nextLevelMenu.enabled = true;
 	}
-
+	
 	// Level Select Menu Button Functionality
 	public void LevelOne()
 	{
@@ -161,6 +163,7 @@ public class MenuController : MonoBehaviour
 		}
 
 	}
+	
 }
 
 
