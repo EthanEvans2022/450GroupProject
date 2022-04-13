@@ -29,6 +29,7 @@ public class CombinedController : MovementHandler
 
     protected void Update()
     {
+        if (gameObject.GetComponentInParent<CharacterController>().isPaused) return;
         if (isCombined) CombinedControls();
         UpdateAnimation();
     }
