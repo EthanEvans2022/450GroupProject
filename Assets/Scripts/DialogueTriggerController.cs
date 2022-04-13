@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class DialogueTriggerController : MonoBehaviour
 {
+
+	//Config
+	public string[] storedText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +20,10 @@ public class DialogueTriggerController : MonoBehaviour
         
     }
     
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        MenuController.instance.DisplayDialogue();
+		DialogueController.instance.textParts = storedText;
+		DialogueController.instance.currentDialogue = 0;
+        DialogueController.instance.NextText();
     }
 }

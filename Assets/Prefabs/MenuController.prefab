@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5940765442872262018
+--- !u!1 &1454635982891400168
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5940765442872262017}
-  - component: {fileID: 5940765442872262016}
+  - component: {fileID: 7991988739599312235}
+  - component: {fileID: 8632840667388716644}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -17,33 +17,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5940765442872262017
+--- !u!4 &7991988739599312235
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5940765442872262018}
+  m_GameObject: {fileID: 1454635982891400168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.717885, y: 1.387789, z: -0.096142806}
+  m_LocalPosition: {x: 8.128984, y: -1.5990067, z: 1.0360148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5940765442872262016
+--- !u!114 &8632840667388716644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5940765442872262018}
+  m_GameObject: {fileID: 1454635982891400168}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0889870ba67784c74bc4ad1282fb6cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 0}
-  directions: {fileID: 0}
-  levelSelectMenu: {fileID: 0}
+  mainMenu: {fileID: 833626611793984675, guid: b4c2bbf5856304e109526ba813c105e4, type: 3}
+  directions: {fileID: 1333464300701348931, guid: 87714c3209f4147b39bae9e948651cee, type: 3}
+  levelSelectMenu: {fileID: 6899904288029984687, guid: f76fa5875744e471aa779c712956425f, type: 3}
+  nextLevelMenu: {fileID: 8413000470187730863, guid: 8a86a433bbf864f0995ed5232a1e8719, type: 3}
+  dialogueBox: {fileID: 7352371527394762080, guid: 3ab1b264c5413469fbf1ee96b4c6fb99, type: 3}
+  dialogueText: {fileID: 2546454853384081227, guid: 4ffb38244ee1a46af8e5c5e780e7ccad, type: 3}
