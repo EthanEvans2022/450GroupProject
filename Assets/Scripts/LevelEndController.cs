@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelEndController : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D other)
+    public int nextSceneIndex;
+    void OnTriggerEnter2D(Collider2D other)
     {
-        // get the next level menu up when colliding with a player; TODO: figure out how to get this to trigger only when the player is combined
-        if (other.gameObject.layer == 8)
+        // get the next level menu up when colliding with a player;
+        if (other.gameObject.GetComponent<CombinedController>())
         {
-            //MenuController.instance.ShowNextMenu();
-			MenuController.instance.ShowNextLevelMenu();
+            SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }
