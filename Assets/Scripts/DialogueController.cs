@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,8 +29,8 @@ using TMPro;
 	        "Semper viverra nam libero justo. Arcu odio ut sem nulla pharetra diam sit amet.",
 	        "Varius morbi enim nunc faucibus a pellentesque sit amet. Id donec ultrices tincidunt arcu. Imperdiet sed euismod nisi porta lorem mollis."
         };
-    
-    
+        
+
         // Methods
         void Awake()
         {
