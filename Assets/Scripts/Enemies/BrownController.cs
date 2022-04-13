@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BrownController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class BrownController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private StateController _state;
     private HealthController _health;
+    private NavMeshAgent _nav;
 
     
     //Config
@@ -22,6 +24,7 @@ public class BrownController : MonoBehaviour
         _state = GetComponent<StateController>();
         _animator = GetComponent<Animator>();
         _health = GetComponent<HealthController>();
+        _nav = GetComponent<NavMeshAgent>();
         _state.attackEvent += (c) =>
         {
             var p = Instantiate(projectile);
@@ -34,7 +37,7 @@ public class BrownController : MonoBehaviour
 
     private void Update()
     {
-        var mov = _rigidbody.velocity;
+        var mov = _nav.velocity;
         _animator.SetFloat(MovementX, mov.x);
         _animator.SetFloat(MovementY, mov.y);
         _animator.speed = mov.magnitude; //Moving faster should make the animation move faster

@@ -7,6 +7,7 @@ using UnityEngine;
 public class KeyboardController : MonoBehaviour
 {
     //Outlets
+    public static KeyboardController instance;
     protected Transform Tf;
     protected Rigidbody2D Rb;
     private Animator _animator;
@@ -17,8 +18,13 @@ public class KeyboardController : MonoBehaviour
     private static readonly int MovementY = Animator.StringToHash("MovementY");
     
     //States
-	
+    public bool isPaused;
+    
     //Methods
+    void Awake()
+    {
+        instance = this;
+    }
     void Start(){
        Tf = GetComponent<Transform>(); 
        Rb = GetComponent<Rigidbody2D>();
@@ -28,6 +34,9 @@ public class KeyboardController : MonoBehaviour
 
     void Update()
     {
+        if (isPaused) {
+            return;
+        }
         StandardControls();
         UpdateAnimation();
     }

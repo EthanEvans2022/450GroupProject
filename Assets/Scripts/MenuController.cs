@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 
+
 public class MenuController : MonoBehaviour
 {
 
 	//	Outlets
 	public static MenuController instance;
-	public Canvas mainMenu;
+	//public Canvas mainMenu;
+	public GameObject mainMenu;
 	public Canvas directions;
 	public Canvas levelSelectMenu;
 	public Canvas nextLevelMenu;
@@ -39,6 +41,7 @@ public class MenuController : MonoBehaviour
 		print("In the Awake() method of the MenuController\n");
 		instance = this;
 		mainMenuOn = false;
+		print("in Awake(), mainMenuOn = " + mainMenuOn);
 		Hide();
 		currentLevel = 1;
 		currentDialogue = 0;
@@ -47,8 +50,11 @@ public class MenuController : MonoBehaviour
 	public void Hide()
 	{
 		print("In the Hide() method of the MenuController\n");
-		mainMenu.enabled = false;
+		//mainMenu.enabled = false;
+		mainMenu.SetActive(false);
 		mainMenuOn = false;
+		print("in Hide(), mainMenuOn = " + mainMenuOn);
+		//print("in Hide(), mainMenu.enabled = " + mainMenu.enabled);
 		directions.enabled = false;
 		levelSelectMenu.enabled = false;
 		nextLevelMenu.enabled = false;
@@ -60,6 +66,7 @@ public class MenuController : MonoBehaviour
 	{
 		print("In the ShowMainMenu() method of the MenuController\n");
 		mainMenuOn = false;
+		print("in ShowMainMenu(), mainMenuOn = " + mainMenuOn);
 		ToggleMainMenu();
 	}
 	
@@ -67,28 +74,39 @@ public class MenuController : MonoBehaviour
 	// Toggle the main menu
 	public void ToggleMainMenu()
 	{
-		print("In the ToggleMainMenu() method of the MenuController\n");
+		//print("At the top of ToggleMainMenu() method of the MenuController. mainMenu.enabled: " + mainMenu.enabled);
 		// Turn off all menus
-		mainMenu.enabled = false;
+		//mainMenu.enabled = false;
+		mainMenu.SetActive(false);
 		directions.enabled = false;
 		levelSelectMenu.enabled = false;
 		nextLevelMenu.enabled = false;
-		
+		//print("in ToggleMainMenu() before the if-else statement, mainMenuOn = " + mainMenuOn + ", mainMenu.enabled: " + mainMenu.enabled);
 		
 		if (mainMenuOn)
 		{
-			mainMenu.enabled = false;
+			//mainMenu.enabled = false;
+			mainMenu.SetActive(false);
 			mainMenuOn = false;
 			Hide();
+			print("in the if statement\n");
+			print("mainMenuOn is: " + mainMenuOn);
+			//print("mainMenu.enabled is: " + mainMenu.enabled);
 			//CharacterController.isPause = false;
 		}
 		else
 		{
-			mainMenu.enabled = true;
+			//mainMenu.enabled = true;
+			mainMenu.SetActive(true);
 			mainMenuOn = true;
+			print("in the else statement\n");
+			print("mainMenuOn is: " + mainMenuOn);
+			//print("mainMenu.enabled is: " + mainMenu.enabled);
 			//CharacterController.isPause = true;
 
 		}
+
+		//print("at the bottom of the ToggleMainMenu() method of the MenuController. Value of mainMenuOn: " + mainMenuOn + ". Value of mainMenu.enabled: " + mainMenu.enabled);
 	}
 	
 	// Show menus
@@ -98,21 +116,21 @@ public class MenuController : MonoBehaviour
 		Hide();
 		directions.enabled = true;
 	}
-
+	
 	public void ShowLevelSelectMenu()
 	{
 		print("In the ShowLevelSelectMenu() method of the MenuController\n");
 		Hide();
-		levelSelectMenu.enabled = true;
+		//levelSelectMenu.enabled = true;
 	}
-
+	
 	public void ShowNextLevelMenu()
 	{
 		print("In the ShowNextLevelMenu() method of the MenuController\n");
 		Hide();
 		nextLevelMenu.enabled = true;
 	}
-
+	
 	// Level Select Menu Button Functionality
 	public void LevelOne()
 	{
@@ -161,6 +179,7 @@ public class MenuController : MonoBehaviour
 		}
 
 	}
+	
 }
 
 

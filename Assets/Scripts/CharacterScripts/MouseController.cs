@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class MouseController : MonoBehaviour 
 {
     //Outlets
+    public static MouseController instance;
     protected Transform tf;
     protected Rigidbody2D rb;
     [HideInInspector] public NavMeshAgent navMeshAgent;
@@ -17,6 +18,8 @@ public class MouseController : MonoBehaviour
     Camera mouseCamera;
 
     //States
+    public bool isPaused;
+    
     //POC state, allows for switching between movements in demo
     private enum MovementType{
         Teleport,
@@ -26,6 +29,10 @@ public class MouseController : MonoBehaviour
     private MovementType movementType;
 
     //Methods
+    void Awake()
+    {
+        instance = this;
+    }
     void Start(){
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.updateRotation = false;
@@ -39,6 +46,9 @@ public class MouseController : MonoBehaviour
        mouseCamera = GameObject.Find("Mouse Camera").GetComponent<Camera>();
     }
     void Update(){
+        if (isPaused) {
+            return;
+        }
         InputListener();
     }
     private void InputListener()

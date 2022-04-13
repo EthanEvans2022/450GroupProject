@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5054612684682300610, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
       propertyPath: m_Name
-      value: BrownRobe
+      value: BrownRobe Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5054612684682300615, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
       propertyPath: m_RootOrder
@@ -166,12 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d77b731f0333844d92f1815f4f4a9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 3
   healInterval: 1
   acidInterval: 1
   fireInterval: 1
   lightningInterval: 1
-  currentHealth: 100
+  currentHealth: 3
 --- !u!114 &683885007
 MonoBehaviour:
   m_ObjectHideFlags: 0
