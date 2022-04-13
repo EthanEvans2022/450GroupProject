@@ -279,9 +279,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 6233322889578864533}
     m_Modifications:
     - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5054612684682300608, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 5054612684682300610, guid: 77a6870a8ab864e86b1b20bbcd1e37a9, type: 3}
       propertyPath: m_Name
       value: BrownRobe Variant
