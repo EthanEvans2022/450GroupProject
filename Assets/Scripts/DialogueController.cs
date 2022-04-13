@@ -1,23 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
     public class DialogueController : MonoBehaviour
     {
         // Outlets
-        public static DialogueController dialogueControllerInstance;
+        public static DialogueController instance;
         public GameObject dialogueMenu;
-        public GameObject[] textParts;
-        private int currentDialogueBox;
+        //public GameObject[] textParts;
+        public TMP_Text dialogueText;
+        
+        // Configurations
+        public int currentDialogue;
+        // Configurations
+/*
+        private string[] textParts =
+        {
+	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	        "Semper viverra nam libero justo. Arcu odio ut sem nulla pharetra diam sit amet.",
+	        "Varius morbi enim nunc faucibus a pellentesque sit amet. Id donec ultrices tincidunt arcu. Imperdiet sed euismod nisi porta lorem mollis."
+        };
+*/
+		public string[] textParts =
+        {
+	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	        "Semper viverra nam libero justo. Arcu odio ut sem nulla pharetra diam sit amet.",
+	        "Varius morbi enim nunc faucibus a pellentesque sit amet. Id donec ultrices tincidunt arcu. Imperdiet sed euismod nisi porta lorem mollis."
+        };
     
     
         // Methods
         void Awake()
         {
-            dialogueControllerInstance = this;
+            instance = this;
             HideDialogueController();
-            currentDialogueBox = 0;
+            currentDialogue = 0;
             
         }
 
@@ -34,21 +52,19 @@ using UnityEngine;
         public void NextText()
         {
 			ShowDialogueController();
-            for (int i = 0; i < textParts.Length; i++)
-			{	
-				textParts[i].SetActive(false);
-			}
 			
-
-			if (currentDialogueBox < textParts.Length)
+			if (currentDialogue < textParts.Length)
 			{
-				textParts[currentDialogueBox].SetActive(true);	
-				currentDialogueBox = currentDialogueBox + 1;
+				dialogueText.text = textParts[currentDialogue];
+				currentDialogue = currentDialogue + 1;
 			}
 			else
 			{
+				/*
+				dialogueBox.enabled = false;
+				dialogueText.enabled = false;
+				*/
 				HideDialogueController();
-				currentDialogueBox = 0;
 			}
 
         }	

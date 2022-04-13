@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
 
+
 public class CharacterController : MonoBehaviour
 {
+	public static CharacterController instance;
+
     //Configurations
     public CombinedController combined;
     public KeyboardController keyboard;
@@ -15,11 +18,16 @@ public class CharacterController : MonoBehaviour
     
     //States
     public bool isCombined = true;
-	//public bool isPause;
+	public bool isPaused;
 
     //Outlets
 
     //Methods
+	void Awake()
+    {
+    	instance = this;
+    }
+
     private void Start()
     {
         combinedInstance = combined.gameObject;
@@ -33,11 +41,10 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
-		/*
-		if (isPause) {
+		if (isPaused) {
 			return;
 		}
-		*/
+		
 
         if (Input.GetKeyDown(KeyCode.C)) ToggleCharacterCombined();
         HandleMenuControls();
@@ -45,11 +52,13 @@ public class CharacterController : MonoBehaviour
 
     private void HandleMenuControls(){
         if (Input.GetKeyDown(KeyCode.Return)){
-            MenuController.instance.DisplayDialogue();
+            //MenuControllerVersion2.instance.ShowDialogue();
+			DialogueController.instance.NextText();
         }
-
+		
+		// Pause Menu
         if (Input.GetKeyDown(KeyCode.Escape)){
-            MenuController.instance.ToggleMainMenu();
+            MenuControllerVersion2.instance.Show();
         }
     }
 
