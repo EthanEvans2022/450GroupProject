@@ -14,7 +14,7 @@ Level 2:
 Intro: “I followed the stairs I found upward and discovered another room. More strange writing.”
 
 Level 3:
-Intro: “I didn’t expect such resistance. But these robed figure can only mean one person.” “The Lord of the Engine of this World, Bringer of Prefabs, the holy Quest-giver, the final evaluator….” “ROBERT SANTOS”
+Intro: “I didn’t expect such resistance. But these robed figures can only mean one person.” “The Lord of the Engine of this World, Bringer of Prefabs, the holy Quest-giver, the final evaluator….” “ROBERT SANTOS”
 
 Level 4:
 Intro: “I didn’t expect his machinations to be so Unityfied against me. The strange runes are beginning to make an elaborate pattern in my head. Loops within loops, strange words, I didn’t know what to make of it.”
