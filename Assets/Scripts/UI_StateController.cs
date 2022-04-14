@@ -85,6 +85,7 @@ public class UI_StateController : MonoBehaviour
 
     private bool CheckDepletingState()
     {
+        if (_mousePlayer.activeSelf == false) return false;
         // Debug.Log(mousePlayer.transform.position);
         // Debug.Log(keyboardPlayer.transform.position);
         print(_mousePlayer.transform.position);
