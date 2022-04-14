@@ -18,6 +18,7 @@ public class CharacterController : MonoBehaviour
     //States
     public bool isCombined = true;
     public bool isPaused;
+    public bool godMode;
 
     //Outlets
 
@@ -60,7 +61,16 @@ public class CharacterController : MonoBehaviour
 
 
         if (Input.GetKeyDown(KeyCode.C)) ToggleCharacterCombined();
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            godMode = !godMode;
+        }
         HandleMenuControls();
+        if (godMode)
+        {
+            var hc = GetComponent<HealthController>();
+            hc.currentHealth = hc.maxHealth;
+        }
     }
 
     private void HandleMenuControls()
