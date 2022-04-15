@@ -22,8 +22,10 @@ public class DialogueTriggerController : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
+			print("Triggering Dialog");
 		DialogueController.instance.textParts = storedText;
 		DialogueController.instance.currentDialogue = 0;
         DialogueController.instance.NextText();
+        Destroy(gameObject);
     }
 }

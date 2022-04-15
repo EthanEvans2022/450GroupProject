@@ -42,7 +42,6 @@ public class BrownController : MonoBehaviour
         _animator.SetFloat(MovementY, mov.y);
         _animator.speed = mov.magnitude; //Moving faster should make the animation move faster
 
-        print(_health.currentHealth);
         if (_health.currentHealth <= 0)
         {
             Destroy(gameObject);

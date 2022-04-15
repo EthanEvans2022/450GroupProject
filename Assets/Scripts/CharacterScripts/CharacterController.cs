@@ -18,6 +18,7 @@ public class CharacterController : MonoBehaviour
     //States
     public bool isCombined = true;
     public bool isPaused;
+    public bool godMode;
 
     //Outlets
 
@@ -25,6 +26,9 @@ public class CharacterController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        combinedInstance = combined.gameObject;
+        keyboardInstance = keyboard.gameObject;
+        mouseInstance = mouse.gameObject;
     }
 
     private void Start()
@@ -50,11 +54,21 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+        HandleMenuControls();
+
         if (isPaused) return;
 
 
         if (Input.GetKeyDown(KeyCode.C)) ToggleCharacterCombined();
-        HandleMenuControls();
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            godMode = !godMode;
+        }
+        if (godMode)
+        {
+            var hc = GetComponent<HealthController>();
+            hc.currentHealth = hc.maxHealth;
+        }
     }
 
     private void HandleMenuControls()
@@ -63,7 +77,11 @@ public class CharacterController : MonoBehaviour
             DialogueController.instance.NextText();
 
         // Pause Menu
-        if (Input.GetKeyDown(KeyCode.Escape)) MenuControllerVersion2.instance.Show();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused) MenuControllerVersion2.instance.Hide();
+            else MenuControllerVersion2.instance.Show();
+        }
     }
 
     //Toggle Combined or Split
