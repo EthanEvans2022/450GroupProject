@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d77b731f0333844d92f1815f4f4a9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   healInterval: 1
   acidInterval: 1
   fireInterval: 1
