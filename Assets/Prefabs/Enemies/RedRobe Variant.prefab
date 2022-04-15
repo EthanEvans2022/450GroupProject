@@ -450,7 +450,7 @@ MonoBehaviour:
   acidInterval: 1
   fireInterval: 1
   lightningInterval: 1
-  currentHealth: 100
+  currentHealth: 50
 --- !u!114 &1941115832172753696
 MonoBehaviour:
   m_ObjectHideFlags: 0
