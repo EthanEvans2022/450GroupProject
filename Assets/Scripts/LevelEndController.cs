@@ -10,7 +10,7 @@ public class LevelEndController : MonoBehaviour
         // get the next level menu up when colliding with a player;
         if (other.gameObject.GetComponent<CombinedController>())
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

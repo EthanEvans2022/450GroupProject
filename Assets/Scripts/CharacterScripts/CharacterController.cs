@@ -26,7 +26,6 @@ public class CharacterController : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        print("SET INSTANCE");
         combinedInstance = combined.gameObject;
         keyboardInstance = keyboard.gameObject;
         mouseInstance = mouse.gameObject;

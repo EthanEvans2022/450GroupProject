@@ -1960,12 +1960,7 @@ MonoBehaviour:
   dialogueMenu: {fileID: 8804064658592808302}
   dialogueText: {fileID: 8804064657657030972}
   currentDialogue: 0
-  textParts:
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua.
-  - Semper viverra nam libero justo. Arcu odio ut sem nulla pharetra diam sit amet.
-  - Varius morbi enim nunc faucibus a pellentesque sit amet. Id donec ultrices tincidunt
-    arcu. Imperdiet sed euismod nisi porta lorem mollis.
+  textParts: []
 --- !u!1 &8804064658735153198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2769,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 8804064657771624474}
-  directionsMenu: {fileID: 0}
   levelMenu: {fileID: 8804064658735153198}
 --- !u!1 &8804064659440274878
 GameObject:
