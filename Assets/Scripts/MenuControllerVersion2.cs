@@ -10,7 +10,6 @@ public class MenuControllerVersion2 : MonoBehaviour
     
     // Outlets
     public GameObject mainMenu;
-    public GameObject directionsMenu;
     public GameObject levelMenu;
    
     // Methods
@@ -22,8 +21,8 @@ public class MenuControllerVersion2 : MonoBehaviour
 
     public void Show()
     {
-        ShowMainMenu();
         gameObject.SetActive(true);
+        ShowMainMenu();
         CharacterController.instance.isPaused = true;
         if (MouseController.instance && KeyboardController.instance)
         {
@@ -54,7 +53,6 @@ public class MenuControllerVersion2 : MonoBehaviour
         print("in SwitchMenu(), called with parameter: " + someMenu);
         // Turn off all menus
         mainMenu.SetActive(false);
-        directionsMenu.SetActive(false);
         levelMenu.SetActive(false);
         
         // Turn on requested menu
@@ -65,22 +63,14 @@ public class MenuControllerVersion2 : MonoBehaviour
     {
         SwitchMenu(mainMenu);
     }
-    public void ShowDirectionsMenu()
-    {
-        SwitchMenu(directionsMenu);
-    }
+
     public void ShowLevelMenu()
     {
         SwitchMenu(levelMenu);
     }
     
-    public void LevelOne()
+    public void LoadLevel(int level)
     {
-        SceneManager.LoadScene("mark_w5");
-    }
-
-    public void LevelTwo()
-    {
-        SceneManager.LoadScene("LightingTest");
+        SceneManager.LoadSceneAsync(level);
     }
 }

@@ -34,8 +34,6 @@ public class CharacterController : MonoBehaviour
 
     private void Start()
     {
-        instance = this;
-        print("SET INSTANCE");
         combinedInstance = combined.gameObject;
         keyboardInstance = keyboard.gameObject;
         mouseInstance = mouse.gameObject;
@@ -57,6 +55,8 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+        HandleMenuControls();
+
         if (isPaused) return;
 
 
@@ -65,7 +65,6 @@ public class CharacterController : MonoBehaviour
         {
             godMode = !godMode;
         }
-        HandleMenuControls();
         if (godMode)
         {
             var hc = GetComponent<HealthController>();
@@ -79,7 +78,11 @@ public class CharacterController : MonoBehaviour
             DialogueController.instance.NextText();
 
         // Pause Menu
-        if (Input.GetKeyDown(KeyCode.Escape)) MenuControllerVersion2.instance.Show();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused) MenuControllerVersion2.instance.Hide();
+            else MenuControllerVersion2.instance.Show();
+        }
     }
 
     //Toggle Combined or Split
