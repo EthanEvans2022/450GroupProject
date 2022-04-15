@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class Santos : MonoBehaviour
@@ -44,9 +45,15 @@ public class Santos : MonoBehaviour
         
         if (_health.currentHealth <= 0)
         {
-            DialogueController.instance.textParts = new[]{"LOREM", "YOU WIN!!!!"};
+            DialogueController.instance.textParts = new[]{"And so I killed Robert and unleashed the Red Error.", "Now I can never rest for I know", "that one day he will return","to evaluate the mess that I have made of this quest."};
             DialogueController.instance.currentDialogue = 0;
             DialogueController.instance.NextText();
+            
+            foreach (var cam in Camera.allCameras)
+            {
+                cam.backgroundColor = Color.red;
+            }
+            
             Destroy(gameObject);
         }
 
